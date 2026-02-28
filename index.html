@@ -94,9 +94,27 @@ nav a{
 
 .section h2{
     margin-bottom:30px;
-    font-size:28px;
+    font-size:30px;
 }
 
+/* Beneficios */
+.benefits{
+    max-width:1000px;
+    margin:auto;
+    text-align:left;
+}
+
+.benefits ul{
+    list-style:none;
+    padding:0;
+}
+
+.benefits li{
+    margin:15px 0;
+    font-size:18px;
+}
+
+/* Proyectos */
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -110,6 +128,7 @@ nav a{
     border-radius:8px;
 }
 
+/* Servicios */
 .services{
     background:#2b2b2b;
     color:white;
@@ -119,20 +138,55 @@ nav a{
     color:#d6c3a5;
 }
 
+/* Opiniones */
 .reviews{
-    background:white;
+    background:#ffffff;
 }
 
-.review-box{
-    max-width:800px;
-    margin:20px auto;
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.review-card{
+    background:#f8f6f2;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    text-align:left;
+}
+
+.review-card span{
+    font-size:20px;
+    color:#d4a017;
+}
+
+.review-card p{
+    margin-top:15px;
+    line-height:1.6;
+}
+
+.review-card strong{
+    display:block;
+    margin-top:15px;
+}
+
+/* CTA */
+.cta{
+    background:#1f1f1f;
+    color:white;
+    padding:60px 20px;
+}
+
+.cta a{
+    margin-top:20px;
+    display:inline-block;
 }
 
 /* Contacto */
-.contact{
-    background:#f2ede6;
-}
-
 .contact a{
     text-decoration:none;
     color:#2b2b2b;
@@ -140,7 +194,7 @@ nav a{
 
 /* Footer */
 footer{
-    background:#1f1f1f;
+    background:#000;
     color:white;
     text-align:center;
     padding:20px;
@@ -168,14 +222,10 @@ footer{
 <body>
 
 <div class="topbar">
-    <div>
-        📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos  
-        📞 +56 9 3389 0368  
-        <a href="mailto:Forestalramos.rj@gmail.com">📧 forestalramos.rj@gmail.com</a>
-    </div>
-    <div>
-        <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">WhatsApp Directo</a>
-    </div>
+    📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos  
+    📞 +56 9 3389 0368  
+    <a href="mailto:Forestalramos.rj@gmail.com">📧 forestalramos.rj@gmail.com</a>
+    <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">WhatsApp</a>
 </div>
 
 <header>
@@ -189,8 +239,8 @@ footer{
 
 <section class="hero">
     <div>
-        <h2>Proyectos Arquitectónicos y Construcción en Madera</h2>
-        <p>Identidad del sur · Arquitectura moderna · Ejecución profesional</p>
+        <h2>Construimos el hogar que imaginas</h2>
+        <p>Proyectos arquitectónicos y construcción en madera en el sur de Chile</p>
         <a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">
             Cotizar por WhatsApp
         </a>
@@ -198,21 +248,28 @@ footer{
 </section>
 
 <section id="about" class="section">
-    <h2>Nuestra Trayectoria</h2>
-
+    <h2>Sobre Nosotros</h2>
     <p>
-    Properties Family es una constructora ubicada en el sector Pancul, comuna de Los Lagos, Región de Los Ríos.
+    Properties Family nace desde la experiencia de Forestal Ramos,
+    desarrollando construcción residencial en madera en el sur de Chile.
     </p>
-
     <p>
-    Desarrollamos proyectos arquitectónicos y construcción en madera en el sur de Chile,
-    trabajando principalmente en las regiones de Los Ríos, Los Lagos y La Araucanía.
+    Trabajamos en las regiones de Los Ríos, Los Lagos y La Araucanía,
+    con presencia en Pucón, Puerto Varas, Futrono, Osorno y Valdivia.
     </p>
+</section>
 
-    <p>
-    Contamos con presencia en Pucón, Puerto Varas, Futrono, Osorno y Valdivia,
-    ejecutando viviendas con identidad sureña, arquitectura moderna y alto estándar constructivo.
-    </p>
+<section class="section">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="benefits">
+        <ul>
+            <li>✔ Construcción adaptada al clima del sur</li>
+            <li>✔ Proyectos personalizados según presupuesto</li>
+            <li>✔ Terminaciones de alto estándar</li>
+            <li>✔ Acompañamiento desde la planificación hasta la entrega</li>
+            <li>✔ Compromiso real con calidad y cumplimiento</li>
+        </ul>
+    </div>
 </section>
 
 <section id="projects" class="section">
@@ -226,32 +283,46 @@ footer{
     </div>
 </section>
 
-<section class="section services">
-    <h2>Áreas de Especialización</h2>
-    <p>Proyectos arquitectónicos</p>
-    <p>Construcción en madera</p>
-    <p>Viviendas mixtas</p>
-    <p>Hormigón</p>
-    <p>Tiny House</p>
+<section class="section reviews">
+    <h2>Opiniones de Nuestros Clientes</h2>
+    <div class="review-grid">
+
+        <div class="review-card">
+            <span>★★★★★</span>
+            <p>
+            Excelente calidad en la construcción y terminaciones.
+            Nos acompañaron en todo el proceso y cumplieron lo acordado.
+            </p>
+            <strong>Denisse Cofré</strong>
+        </div>
+
+        <div class="review-card">
+            <span>★★★★★</span>
+            <p>
+            Profesionales responsables y comprometidos con cada detalle
+            de nuestro proyecto.
+            </p>
+            <strong>Martín Balmazabal</strong>
+        </div>
+
+        <div class="review-card">
+            <span>★★★★★</span>
+            <p>
+            Construcción sólida y moderna.
+            Totalmente recomendados.
+            </p>
+            <strong>Máximo Soto</strong>
+        </div>
+
+    </div>
 </section>
 
-<section class="section reviews">
-    <h2>Opiniones</h2>
-
-    <div class="review-box">
-        ⭐⭐⭐⭐⭐
-        <p>Excelente calidad y cumplimiento en cada proyecto.</p>
-    </div>
-
-    <div class="review-box">
-        ⭐⭐⭐⭐⭐
-        <p>Construcción sólida, moderna y con identidad del sur.</p>
-    </div>
-
-    <div class="review-box">
-        ⭐⭐⭐⭐⭐
-        <p>Profesionales responsables y comprometidos.</p>
-    </div>
+<section class="cta">
+    <h2>¿Tienes un proyecto en mente?</h2>
+    <p>Conversemos tu idea y hagámosla realidad.</p>
+    <a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">
+        Solicitar Cotización
+    </a>
 </section>
 
 <section id="contact" class="section contact">
