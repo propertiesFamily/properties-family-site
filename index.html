@@ -3,153 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Properties Family - Constructora</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<title>Properties Family</title>
+
 <style>
-body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background-color:#fff; color:#333; }
-header { background-color: rgba(139,94,60,0.85); text-align:center; padding:20px; position:sticky; top:0; z-index:100; }
-.logo-container { display:inline-block; padding:5px 10px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.3); }
-.logo-container img { height:70px; display:block; background:transparent; filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.5)); }
-nav { margin-top:10px; display:flex; justify-content:center; gap:25px; font-weight:bold; }
-nav a { color:#fff; text-decoration:none; transition: color 0.3s; }
-nav a:hover { color:#e67e22; }
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    color:#333;
+}
 
-.hero { position: relative; text-align: center; color: #fff; padding: 120px 20px 80px 20px; overflow: hidden; }
-.hero::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)); z-index: 1; }
-.hero-content { position: relative; z-index: 2; }
-.hero h2 { font-family:'Montserrat',sans-serif; font-size:3em; margin-bottom:20px; text-shadow: 1px 1px 6px rgba(0,0,0,0.5); }
-.hero p { font-size:1.2em; margin-bottom:25px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
-.hero a { padding:15px 30px; background-color:#e67e22; color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; transition: background 0.3s, transform 0.3s; display:inline-block; }
-.hero a:hover { background-color:#d96b1f; transform: translateY(-3px); }
-.hero-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+header {
+    background:#000;
+    color:white;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-.section { padding:60px 20px; background:#fff; border-radius:12px; margin:40px auto; max-width:1200px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
-.section h2 { text-align:center; font-family:'Montserrat',sans-serif; color:#6B4C33; margin-bottom:40px; }
+header img {
+    height:60px;
+}
 
-.planning { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-.planning-step { background:#fff; padding:20px; border-radius:12px; width:280px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
-.planning-step:hover { transform:translateY(-5px); box-shadow:0 6px 16px rgba(0,0,0,0.12); }
-.planning-step h3 { color:#e67e22; margin-bottom:10px; }
+nav a {
+    color:#d4af37;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-.swiper { width:100%; padding-bottom:40px; }
-.swiper-slide { background-color:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); overflow:hidden; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
-.swiper-slide:hover { transform:scale(1.05); box-shadow:0 6px 16px rgba(0,0,0,0.2); }
-.swiper-slide img { width:100%; display:block; border-bottom:1px solid #eee; }
-.swiper-slide h3 { margin:15px; color:#6B4C33; }
-.swiper-slide p { margin:0 15px 15px 15px; }
+.hero {
+    background:url('casa1.jpg') center/cover no-repeat;
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    background-blend-mode:darken;
+    background-color:rgba(0,0,0,0.5);
+}
 
-.testimonial-card { background-color:#f8f8f8; padding:20px; border-radius:12px; text-align:center; font-style:italic; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+.hero h1 {
+    font-size:48px;
+}
 
-form input, form textarea { padding:10px; border-radius:8px; border:1px solid #ccc; width:100%; box-sizing:border-box; font-size:1em; transition:border-color 0.3s; }
-form input:focus, form textarea:focus { border-color:#e67e22; outline:none; }
-form button { padding:12px; background-color:#e67e22; color:#fff; border:none; border-radius:8px; font-weight:bold; cursor:pointer; font-size:1em; transition: background 0.3s, transform 0.3s; }
-form button:hover { background-color:#d96b1f; transform: translateY(-2px); }
+.section {
+    padding:60px 20px;
+    text-align:center;
+}
 
-.contact-icons { display:flex; justify-content:center; gap:30px; margin-top:20px; font-size:1.2em; }
-.contact-icons a { text-decoration:none; color:#6B4C33; display:flex; align-items:center; gap:8px; transition: color 0.3s; }
-.contact-icons a:hover { color:#e67e22; }
+.projects {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-.btn-whatsapp { position: fixed; bottom:20px; right:20px; background-color:#25D366; color:#fff; padding:15px; border-radius:50%; font-size:24px; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:100; transition: transform 0.3s, box-shadow 0.3s; }
-.btn-whatsapp:hover { transform: scale(1.1); box-shadow:0 6px 16px rgba(0,0,0,0.3); }
+.projects img {
+    width:100%;
+    border-radius:10px;
+}
 
-footer { background-color:#6B4C33; color:#fff; text-align:center; padding:20px; margin-top:40px; border-radius:12px; }
+.gold {
+    color:#d4af37;
+}
 
-.map-container iframe { width:100%; height:300px; border:0; border-radius:12px; }
+.reviews {
+    background:#f8f8f8;
+}
+
+.contact img {
+    width:40px;
+    margin:10px;
+}
+
+footer {
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="logo.png" alt="Properties Family Logo">
-    </div>
+    <img src="logo.png" alt="Logo">
     <nav>
-        <a href="#about">Nosotros</a>
-        <a href="#planning">Planificación</a>
         <a href="#projects">Proyectos</a>
-        <a href="#testimonials">Opiniones</a>
+        <a href="#reviews">Reseñas</a>
         <a href="#contact">Contacto</a>
     </nav>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h2>Bienvenidos a Properties Family</h2>
-        <p>Diseñamos y construimos hogares sólidos en el sur de Chile, adaptados al entorno y clima local.</p>
-        <a href="#projects">Ver proyectos</a>
-    </div>
-    <img src="casa_modern.png" alt="Casa moderna" class="hero-image">
-</section>
-
-<section id="about" class="section">
-    <h2>Sobre Nosotros</h2>
-    <p>Desde 2021, Forestal Ramos se transformó en Properties Family, ofreciendo hogares duraderos adaptados al sur de Chile.</p>
-</section>
-
-<section id="planning" class="section">
-    <h2>Planificación de Obras</h2>
-    <div class="planning">
-        <div class="planning-step"><h3>Diseño</h3><p>Planificación personalizada según las necesidades de cada familia.</p></div>
-        <div class="planning-step"><h3>Construcción</h3><p>Materiales de calidad adaptados al clima del sur de Chile.</p></div>
-        <div class="planning-step"><h3>Entrega</h3><p>Hogar listo y seguro para toda la familia.</p></div>
+    <div>
+        <h1>Bienvenidos a <span class="gold">Properties Family</span></h1>
+        <p>Construcción · Corretaje · Inversión</p>
     </div>
 </section>
 
 <section id="projects" class="section">
-    <h2>Proyectos</h2>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="casa1.jpg" alt=""><h3>Casa 1</h3><p>Ubicada en Osorno, diseño moderno y funcional.</p></div>
-            <div class="swiper-slide"><img src="casa2.jpg" alt=""><h3>Casa 2</h3><p>Ubicada en Frutillar, adaptada al clima sur.</p></div>
-            <div class="swiper-slide"><img src="casa3.jpg" alt=""><h3>Casa 3</h3><p>Diseño innovador y materiales de calidad.</p></div>
-            <div class="swiper-slide"><img src="casa4.jpg" alt=""><h3>Casa 4</h3><p>Proyectos con foco en eficiencia y confort.</p></div>
-            <div class="swiper-slide"><img src="casa5.jpg" alt=""><h3>Casa 5</h3><p>Hogares pensados para toda la familia.</p></div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+    <h2 class="gold">Nuestros Proyectos</h2>
+    <div class="projects">
+        <img src="casa1.jpg">
+        <img src="casa2.jpg">
+        <img src="casa3.jpg">
+        <img src="casa4.jpg">
     </div>
 </section>
 
-<section id="testimonials" class="section">
-    <h2>Opiniones</h2>
-    <div class="swiper mySwiperTestimonials">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide testimonial-card">“Excelente construcción y atención personalizada.”</div>
-            <div class="swiper-slide testimonial-card">“Nuestro hogar quedó perfecto, adaptado al clima sur.”</div>
-            <div class="swiper-slide testimonial-card">“Recomiendo Properties Family a toda familia.”</div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
+<section id="reviews" class="section reviews">
+    <h2 class="gold">Reseñas</h2>
+    <p>⭐️⭐️⭐️⭐️⭐️ Excelente atención y compromiso.</p>
+    <p>⭐️⭐️⭐️⭐️⭐️ Profesionalismo y calidad garantizada.</p>
+    <p>⭐️⭐️⭐️⭐️⭐️ Cumplen lo que prometen.</p>
 </section>
 
-<section id="contact" class="section">
-    <h2>Contacto</h2>
-    <form action="mailto:Forestalramos.rj@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Correo" required>
-        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-    <div class="contact-icons">
-        <a href="mailto:Forestalramos.rj@gmail.com"><i class="fas fa-envelope"></i> Forestalramos.rj@gmail.com</a>
-        <a href="https://wa.me/56933890368"><i class="fab fa-whatsapp"></i> +56933890368</a>
-    </div>
+<section class="section">
+    <h2 class="gold">Contamos con Gran Presencia</h2>
+    <p>Amplia trayectoria en el mercado inmobiliario y construcción en Chile.</p>
 </section>
 
-<a href="https://wa.me/56933890368" class="btn-whatsapp"><i class="fab fa-whatsapp"></i></a>
+<section id="contact" class="section contact">
+    <h2 class="gold">Contacto</h2>
+    <p>Email: propertiesfamily@gmail.com</p>
+    <p>WhatsApp: +56 9 XXXX XXXX</p>
+    <div>
+        <img src="gmail.png" alt="Gmail">
+        <img src="whatsapp.png" alt="WhatsApp">
+    </div>
+</section>
 
 <footer>
-    <p>&copy; 2026 Constructora Properties Family. Todos los derechos reservados.</p>
+    © 2026 Properties Family - Todos los derechos reservados
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
-const swiper = new Swiper(".mySwiper", { slidesPerView:1, spaceBetween:20, loop:true, pagination:{ el:".swiper-pagination", clickable:true }, navigation:{ nextEl:".swiper-button-next", prevEl:".swiper-button-prev" }, breakpoints:{ 640:{ slidesPerView:1 }, 768:{ slidesPerView:2 }, 1024:{ slidesPerView:3 } } });
-const swiperTestimonials = new Swiper(".mySwiperTestimonials", { slidesPerView:1, loop:true, autoplay:{ delay:4000 }, pagination:{ el:".swiper-pagination", clickable:true } });
-</script>
 
 </body>
 </html>
