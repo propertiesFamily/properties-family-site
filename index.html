@@ -6,6 +6,7 @@
 <title>Constructora Properties Family</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 <style>
     body {
         font-family: 'Roboto', sans-serif;
@@ -38,140 +39,83 @@
         color: #ffffff;
         transition: color 0.3s;
     }
-    nav a:hover {
-        color: #e67e22;
-    }
+    nav a:hover { color: #e67e22; }
+    
     .hero {
         text-align: center;
-        padding: 60px 20px 40px 20px;
+        color: #fff;
+        padding: 120px 20px 80px 20px;
+        background: url('hero.jpg') center/cover no-repeat;
+        position: relative;
+    }
+    .hero::after {
+        content: '';
+        position: absolute;
+        top:0; left:0; width:100%; height:100%;
+        background-color: rgba(0,0,0,0.45);
+    }
+    .hero-content {
+        position: relative;
+        z-index: 1;
     }
     .hero h2 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 2.5em;
-        color: #1e3a5f;
+        font-size: 3em;
         margin-bottom: 20px;
     }
     .hero p {
-        font-size: 1.1em;
-        margin-bottom: 10px;
+        font-size: 1.2em;
+        margin-bottom: 15px;
     }
-    .section {
-        padding: 60px 20px;
-    }
-    .section h2 {
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        color: #1e3a5f;
-        margin-bottom: 40px;
-    }
-    .projects, .planning, .testimonials {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    .project-card, .planning-step, .testimonial-card {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 12px;
-        width: 280px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .project-card img {
-        width: 100%;
-        border-radius: 12px;
-        transition: transform 0.3s;
-    }
-    .project-card:hover img {
-        transform: scale(1.05);
-    }
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-    .planning-step h3 {
-        color: #e67e22;
-        margin-bottom: 10px;
-    }
-    .testimonial-card {
-        font-style: italic;
-    }
-    form input, form textarea {
-        padding: 10px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 1em;
-    }
-    form button {
-        padding: 12px;
+    .hero a {
+        padding: 15px 30px;
         background-color: #e67e22;
         color: #fff;
-        border: none;
+        text-decoration: none;
         border-radius: 8px;
         font-weight: bold;
-        cursor: pointer;
-        font-size: 1em;
         transition: background 0.3s;
     }
-    form button:hover {
-        background-color: #d96b1f;
-    }
-    .contact-icons {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 20px;
-        font-size: 1.2em;
-    }
-    .contact-icons a {
-        text-decoration: none;
-        color: #1e3a5f;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: color 0.3s;
-    }
-    .contact-icons a:hover {
-        color: #e67e22;
-    }
-    .btn-whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: #fff;
-        padding: 15px;
-        border-radius: 50%;
-        font-size: 24px;
-        text-decoration: none;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        z-index: 100;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .btn-whatsapp:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-    }
-    footer {
-        background-color: #1e3a5f;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-    }
-    .map-container iframe {
-        width: 100%;
-        height: 300px;
-        border: 0;
-        border-radius: 12px;
-    }
-    ul {
-        list-style-type: disc;
-        margin-left: 20px;
-    }
+    .hero a:hover { background-color: #d96b1f; }
+
+    .section { padding: 60px 20px; }
+    .section h2 { text-align: center; font-family: 'Montserrat', sans-serif; color: #1e3a5f; margin-bottom: 40px; }
+
+    /* Proyectos y slider */
+    .swiper { width: 100%; padding-bottom: 40px; }
+    .swiper-slide { background-color: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s; }
+    .swiper-slide:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .swiper-slide img { width: 100%; display: block; }
+    .swiper-slide h3 { margin: 15px; color:#1e3a5f; }
+    .swiper-slide p { margin: 0 15px 15px 15px; }
+
+    /* Testimonios */
+    .testimonial-card { background-color: #f8f8f8; padding: 20px; border-radius: 12px; text-align: center; font-style: italic; }
+
+    /* Planificación */
+    .planning { display:flex; flex-wrap: wrap; gap:20px; justify-content:center; }
+    .planning-step { background:#fff; padding:20px; border-radius:12px; width:280px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .planning-step:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .planning-step h3 { color:#e67e22; margin-bottom:10px; }
+
+    /* Formulario */
+    form input, form textarea { padding:10px; border-radius:8px; border:1px solid #ccc; width:100%; box-sizing:border-box; font-size:1em; transition: border-color 0.3s; }
+    form input:focus, form textarea:focus { border-color:#e67e22; outline:none; }
+    form button { padding:12px; background-color:#e67e22; color:#fff; border:none; border-radius:8px; font-weight:bold; cursor:pointer; font-size:1em; transition: background 0.3s; }
+    form button:hover { background-color:#d96b1f; }
+
+    /* Contacto con íconos */
+    .contact-icons { display:flex; justify-content:center; gap:30px; margin-top:20px; font-size:1.2em; }
+    .contact-icons a { text-decoration:none; color:#1e3a5f; display:flex; align-items:center; gap:8px; transition: color 0.3s; }
+    .contact-icons a:hover { color:#e67e22; }
+
+    .btn-whatsapp { position: fixed; bottom:20px; right:20px; background-color:#25D366; color:#fff; padding:15px; border-radius:50%; font-size:24px; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:100; transition: transform 0.3s, box-shadow 0.3s; }
+    .btn-whatsapp:hover { transform: scale(1.1); box-shadow:0 6px 16px rgba(0,0,0,0.3); }
+
+    footer { background-color:#1e3a5f; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+
+    .map-container iframe { width:100%; height:300px; border:0; border-radius:12px; }
+
 </style>
 </head>
 <body>
@@ -188,26 +132,16 @@
 </header>
 
 <section class="hero">
-    <h2>Bienvenidos a Properties Family</h2>
-    <p>Diseñamos y construimos proyectos únicos en el sur de Chile, combinando calidad, innovación y respeto por el entorno.</p>
-    <p>Más de 50 proyectos completados con total satisfacción de nuestros clientes.</p>
+    <div class="hero-content">
+        <h2>Bienvenidos a Properties Family</h2>
+        <p>Diseñamos y construimos hogares sólidos en el sur de Chile, adaptados al entorno y clima local.</p>
+        <a href="#contact">Contáctanos</a>
+    </div>
 </section>
 
 <section id="about" class="section">
     <h2>Sobre nosotros</h2>
-    <p>Desde 2021, iniciamos como <strong>Forestal Ramos</strong> en el sur de Chile, especializados en <strong>construir hogares sólidos y confiables</strong>, pensados para cada familia y adaptados al clima y entorno del sur del país.</p>
-    <p>Hoy, como <strong>Properties Family</strong>, seguimos enfocados en <strong>crear hogares para toda la familia</strong>, combinando calidad, diseño funcional y respeto por el entorno.</p>
-
-    <p><strong>Beneficios de elegirnos:</strong></p>
-    <ul>
-        <li>Construimos hogares seguros y duraderos para toda la familia.</li>
-        <li>Materiales de primera calidad y técnicas modernas de construcción.</li>
-        <li>Planificación y seguimiento personalizado en cada proyecto.</li>
-        <li>Entrega puntual con cumplimiento total de lo acordado.</li>
-        <li>Más de 50 proyectos realizados con clientes satisfechos.</li>
-    </ul>
-
-    <p><strong>Valores de la empresa:</strong> Calidad | Confianza | Innovación | Atención personalizada | Respeto por el entorno</p>
+    <p>Desde 2021 iniciamos como <strong>Forestal Ramos</strong>, especializados en construir hogares sólidos y confiables. Hoy, como <strong>Properties Family</strong>, seguimos creando hogares para toda la familia en el sur de Chile.</p>
 </section>
 
 <section id="planning" class="section">
@@ -215,11 +149,11 @@
     <div class="planning">
         <div class="planning-step">
             <h3>1. Análisis</h3>
-            <p>Analizamos cuidadosamente el terreno y los requerimientos del cliente para asegurar soluciones eficientes y duraderas.</p>
+            <p>Evaluamos el terreno y necesidades del cliente para soluciones eficientes y duraderas.</p>
         </div>
         <div class="planning-step">
             <h3>2. Diseño</h3>
-            <p>Desarrollamos diseños innovadores y funcionales que armonizan estética, comodidad y el entorno del proyecto.</p>
+            <p>Desarrollamos diseños innovadores y funcionales que armonizan con el entorno.</p>
         </div>
         <div class="planning-step">
             <h3>3. Ejecución</h3>
@@ -230,57 +164,67 @@
 
 <section id="projects" class="section">
     <h2>Proyectos destacados</h2>
-    <div class="projects">
-        <div class="project-card">
-            <img src="casa1.jpg" alt="Proyecto Osorno">
-            <h3>Proyecto Osorno</h3>
-            <p>Residencia familiar moderna, combinando madera y zinc con diseño sostenible.</p>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="casa1.jpg" alt="Proyecto Osorno">
+                <h3>Proyecto Osorno</h3>
+                <p>Residencia familiar moderna, combinando madera y zinc con diseño sostenible.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="casa2.jpg" alt="Proyecto Frutillar">
+                <h3>Proyecto Frutillar</h3>
+                <p>Casa de estilo contemporáneo adaptada al entorno natural del sur de Chile.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="casa3.jpg" alt="Proyecto Puerto Varas">
+                <h3>Proyecto Puerto Varas</h3>
+                <p>Proyecto residencial con énfasis en eficiencia energética y diseño elegante.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="casa4.jpg" alt="Proyecto Futrono">
+                <h3>Proyecto Futrono</h3>
+                <p>Vivienda rural diseñada para armonizar con el paisaje y la naturaleza circundante.</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="casa5.jpg" alt="Proyecto Pucón">
+                <h3>Proyecto Pucón</h3>
+                <p>Casa de descanso con diseño funcional y materiales de alta durabilidad.</p>
+            </div>
         </div>
-        <div class="project-card">
-            <img src="casa2.jpg" alt="Proyecto Frutillar">
-            <h3>Proyecto Frutillar</h3>
-            <p>Casa de estilo contemporáneo adaptada al entorno natural del sur de Chile.</p>
-        </div>
-        <div class="project-card">
-            <img src="casa3.jpg" alt="Proyecto Puerto Varas">
-            <h3>Proyecto Puerto Varas</h3>
-            <p>Proyecto residencial con énfasis en eficiencia energética y diseño elegante.</p>
-        </div>
-        <div class="project-card">
-            <img src="casa4.jpg" alt="Proyecto Futrono">
-            <h3>Proyecto Futrono</h3>
-            <p>Vivienda rural diseñada para armonizar con el paisaje y la naturaleza circundante.</p>
-        </div>
-        <div class="project-card">
-            <img src="casa5.jpg" alt="Proyecto Pucón">
-            <h3>Proyecto Pucón</h3>
-            <p>Casa de descanso con diseño funcional y materiales de alta durabilidad.</p>
-        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 
 <section id="testimonials" class="section">
     <h2>Opiniones de nuestros clientes</h2>
-    <div class="testimonials">
-        <div class="testimonial-card">
-            <p>"Properties Family transformó nuestra idea en realidad. Profesionalismo y atención al detalle de principio a fin."</p>
-            <strong>- Cliente Osorno</strong>
+    <div class="swiper mySwiperTestimonials">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-card">
+                "Properties Family transformó nuestra idea en realidad. Profesionalismo y atención al detalle de principio a fin."
+                <strong>- Cliente Osorno</strong>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                "Cumplieron con todos los plazos y el resultado superó nuestras expectativas."
+                <strong>- Cliente Frutillar</strong>
+            </div>
+            <div class="swiper-slide testimonial-card">
+                "Muy buena planificación y ejecución, atentos a cada detalle del proyecto."
+                <strong>- Cliente Puerto Varas</strong>
+            </div>
         </div>
-        <div class="testimonial-card">
-            <p>"Cumplieron con todos los plazos y el resultado superó nuestras expectativas."</p>
-            <strong>- Cliente Frutillar</strong>
-        </div>
-        <div class="testimonial-card">
-            <p>"Muy buena planificación y ejecución, atentos a cada detalle del proyecto."</p>
-            <strong>- Cliente Puerto Varas</strong>
-        </div>
+        <div class="swiper-pagination"></div>
     </div>
 </section>
 
 <section id="contact" class="section">
     <h2>Contacto y presencia</h2>
     <p><strong>Oficina:</strong> Sector Pancul, Comuna de Los Lagos</p>
-    <p><strong>Presencia:</strong> Contamos con una sólida presencia en la zona sur de Chile, realizando proyectos en <strong>Osorno, Frutillar, Puerto Varas, Futrono y Pucón</strong>. Cada obra se adapta al entorno y clima local, asegurando calidad, durabilidad y satisfacción para cada familia.</p>
+    <p><strong>Presencia:</strong> Contamos con sólida presencia en Osorno, Frutillar, Puerto Varas, Futrono y Pucón.</p>
 
     <form action="https://formspree.io/f/tu-codigo-formulario" method="POST" style="max-width:500px;margin:30px auto;display:flex;flex-direction:column;gap:15px;">
         <input type="text" name="name" placeholder="Tu nombre" required>
@@ -304,6 +248,24 @@
 <footer>
     <p>&copy; 2026 Constructora Properties Family. Todos los derechos reservados.</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    breakpoints: { 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+  });
+  const swiperTestimonials = new Swiper(".mySwiperTestimonials", {
+    slidesPerView: 1,
+    loop:true,
+    autoplay: { delay: 4000 },
+    pagination: { el: ".swiper-pagination", clickable:true }
+  });
+</script>
 
 </body>
 </html>
