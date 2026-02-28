@@ -21,36 +21,36 @@ header{
     align-items:center;
 }
 
-header img{
-    height:60px;
+header h1{
+    color:#f4efe6;
+    font-size:22px;
+    margin:0;
 }
 
 nav a{
     color:#f4efe6;
     margin-left:25px;
     text-decoration:none;
-    font-weight:500;
 }
 
 .hero{
-    background:url('casa1.jpg') center/cover no-repeat;
-    height:90vh;
+    background:linear-gradient(rgba(47,62,47,0.85), rgba(47,62,47,0.85));
+    height:80vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     color:white;
-    background-color:rgba(0,0,0,0.45);
-    background-blend-mode:darken;
+    padding:20px;
 }
 
-.hero h1{
-    font-size:48px;
+.hero h2{
+    font-size:42px;
     margin:0;
 }
 
 .hero p{
-    font-size:20px;
+    font-size:18px;
     margin-top:15px;
 }
 
@@ -62,10 +62,6 @@ nav a{
 .section h2{
     color:#2f3e2f;
     margin-bottom:30px;
-}
-
-.experience{
-    background:white;
 }
 
 .projects{
@@ -93,15 +89,6 @@ nav a{
     background:#e8e1d6;
 }
 
-.contact a{
-    text-decoration:none;
-    color:#2e2e2e;
-}
-
-.contact img{
-    width:65px;
-}
-
 footer{
     background:#2f3e2f;
     color:white;
@@ -109,7 +96,6 @@ footer{
     padding:20px;
 }
 
-/* Botón flotante WhatsApp */
 .whatsapp-float{
     position:fixed;
     bottom:20px;
@@ -124,4 +110,77 @@ footer{
     box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-.whatsapp
+.whatsapp-float span{
+    color:white;
+    font-size:28px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Properties Family</h1>
+    <nav>
+        <a href="#experience">Experiencia</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Soluciones Inmobiliarias Integrales</h2>
+        <p>Desarrollo · Construcción · Corretaje · Inversión</p>
+        <p>Desde nuestras raíces como Forestal Ramos, proyectamos el futuro como Properties Family.</p>
+    </div>
+</section>
+
+<section id="experience" class="section">
+    <h2>Nuestra Experiencia</h2>
+    <p>
+        Iniciamos como <strong>Forestal Ramos</strong>, desarrollando proyectos
+        en madera y construcción en el sur de Chile.
+    </p>
+    <p>
+        Evolucionamos hacia <strong>Properties Family</strong>,
+        integrando desarrollo inmobiliario, corretaje
+        y asesoría en inversión.
+    </p>
+</section>
+
+<section id="projects" class="section">
+    <h2>Proyectos</h2>
+    <div class="projects">
+        <p>Aquí puedes subir tus imágenes de casas.</p>
+    </div>
+</section>
+
+<section class="section services">
+    <h2>Gestión Integral</h2>
+    <p>Desarrollo de proyectos inmobiliarios</p>
+    <p>Construcción personalizada</p>
+    <p>Corretaje profesional</p>
+    <p>Asesoría en inversión</p>
+</section>
+
+<section id="contact" class="section contact">
+    <h2>Contacto</h2>
+    <p>
+        📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a>
+    </p>
+    <p>
+        📱 <a href="https://wa.me/56933890368" target="_blank">+56 9 3389 0368</a>
+    </p>
+</section>
+
+<footer>
+    © 2026 Properties Family | Forestal Ramos
+</footer>
+
+<a href="https://wa.me/56933890368" class="whatsapp-float" target="_blank">
+    <span>💬</span>
+</a>
+
+</body>
+</html>
