@@ -1,186 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constructora Properties Family</title>
-    <style>
-        /* Colores profesionales */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* fondo gris claro */
-            color: #333333; /* texto gris oscuro */
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1e3a5f; /* azul oscuro */
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        header img {
-            max-height: 80px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px 0;
-            background-color: #1e3a5f;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .section {
-            padding: 40px 20px;
-        }
-        .section h2 {
-            color: #1e3a5f;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .projects, .planning, .testimonials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .project-card, .planning-step, .testimonial-card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 280px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .project-card img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        button, .btn-primary {
-            background-color: #e67e22; /* naranja quemado */
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        a {
-            color: #2980b9; /* links azules */
-        }
-        footer {
-            background-color: #1e3a5f;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-        .map-container iframe {
-            width: 100%;
-            height: 300px;
-            border: 0;
-            border-radius: 8px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructora Properties Family</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+    /* Tipografía moderna */
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header img {
+        max-height: 80px;
+    }
+    nav {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-weight: bold;
+    }
+    nav a {
+        text-decoration: none;
+        color: #1e3a5f;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #e67e22;
+    }
+    .hero {
+        text-align: center;
+        padding: 60px 20px 40px 20px;
+    }
+    .hero h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5em;
+        color: #1e3a5f;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    .section {
+        padding: 60px 20px;
+    }
+    .section h2 {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: #1e3a5f;
+        margin-bottom: 40px;
+    }
+    .projects, .planning, .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .project-card, .planning-step, .testimonial-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        width: 280px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card img {
+        width: 100%;
+        border-radius: 12px;
+        transition: transform 0.3s;
+    }
+    .project-card:hover img {
+        transform: scale(1.05);
+    }
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    .planning-step h3 {
+        color: #e67e22;
+        margin-bottom: 10px;
+    }
+    .testimonial-card {
+        font-style: italic;
+    }
+    .btn-whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: #fff;
+        padding: 15px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+    footer {
+        background-color: #1e3a5f;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        border-radius: 12px;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <img src="logotipo.png" alt="Properties Family Logo">
-        <h1>Constructora Properties Family</h1>
-        <nav>
-            <a href="#about">Nosotros</a>
-            <a href="#planning">Planificación</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#testimonials">Opiniones</a>
-            <a href="#contact">Contacto</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h2>Bienvenidos a Properties Family</h2>
-        <p>Construcción y diseño profesional en el sur de Chile.</p>
-        <p>Contamos con más de 50 proyectos construidos y un 100% de aprobación.</p>
-    </section>
+<header>
+    <img src="logo.png" alt="Properties Family Logo">
+    <nav>
+        <a href="#about">Nosotros</a>
+        <a href="#planning">Planificación</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#testimonials">Opiniones</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+</header>
 
-    <section id="about" class="section">
-        <h2>Sobre nosotros</h2>
-        <p>Iniciamos en 2021 como Forestal Ramos. Desde entonces, nuestra misión es entregar soluciones de construcción personalizadas y de alta calidad, adaptadas a cada cliente y entorno.</p>
-    </section>
+<section class="hero">
+    <h2>Bienvenidos a Properties Family</h2>
+    <p>Construcción y diseño profesional en el sur de Chile.</p>
+    <p>Contamos con más de 50 proyectos construidos y un 100% de aprobación.</p>
+</section>
 
-    <section id="planning" class="section">
-        <h2>Proceso de planificación</h2>
-        <div class="planning">
-            <div class="planning-step">
-                <h3>1. Análisis</h3>
-                <p>Estudiamos el terreno y necesidades del cliente para definir soluciones óptimas.</p>
-            </div>
-            <div class="planning-step">
-                <h3>2. Diseño</h3>
-                <p>Se desarrolla un diseño funcional y estético adaptado a cada proyecto.</p>
-            </div>
-            <div class="planning-step">
-                <h3>3. Ejecución</h3>
-                <p>Realizamos la construcción con calidad, cumpliendo plazos y estándares de seguridad.</p>
-            </div>
+<section id="about" class="section">
+    <h2>Sobre nosotros</h2>
+    <p>Iniciamos en 2021 como Forestal Ramos. Nuestra misión es entregar soluciones de construcción personalizadas y de alta calidad, adaptadas a cada cliente y entorno.</p>
+</section>
+
+<section id="planning" class="section">
+    <h2>Proceso de planificación</h2>
+    <div class="planning">
+        <div class="planning-step">
+            <h3>1. Análisis</h3>
+            <p>Estudiamos el terreno y necesidades del cliente para definir soluciones óptimas.</p>
         </div>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Proyectos destacados</h2>
-        <div class="projects">
-            <div class="project-card">
-                <img src="proyecto1.jpg" alt="Proyecto 1">
-                <h3>Proyecto residencial Osorno</h3>
-                <p>Construcción de vivienda familiar con diseño moderno y eficiente.</p>
-            </div>
-            <div class="project-card">
-                <img src="proyecto2.jpg" alt="Proyecto 2">
-                <h3>Proyecto Frutillar</h3>
-                <p>Obra de arquitectura sustentable en entorno rural.</p>
-            </div>
-            <div class="project-card">
-                <img src="proyecto3.jpg" alt="Proyecto 3">
-                <h3>Proyecto Puerto Varas</h3>
-                <p>Vivienda de lujo con acabados de alta calidad.</p>
-            </div>
+        <div class="planning-step">
+            <h3>2. Diseño</h3>
+            <p>Se desarrolla un diseño funcional y estético adaptado a cada proyecto.</p>
         </div>
-    </section>
-
-    <section id="testimonials" class="section">
-        <h2>Opiniones de nuestros clientes</h2>
-        <div class="testimonials">
-            <div class="testimonial-card">
-                <p>"Excelente trabajo, muy profesional y atento a los detalles. ¡Totalmente recomendable!"</p>
-                <strong>- Cliente Osorno</strong>
-            </div>
-            <div class="testimonial-card">
-                <p>"Cumplieron con todos los plazos y el resultado superó nuestras expectativas."</p>
-                <strong>- Cliente Frutillar</strong>
-            </div>
-            <div class="testimonial-card">
-                <p>"Muy buena planificación y ejecución, atentos a cada detalle del proyecto."</p>
-                <strong>- Cliente Puerto Varas</strong>
-            </div>
+        <div class="planning-step">
+            <h3>3. Ejecución</h3>
+            <p>Realizamos la construcción con calidad, cumpliendo plazos y estándares de seguridad.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact" class="section">
-        <h2>Contacto y presencia</h2>
-        <p><strong>Oficina:</strong> Sector Pancul, Comuna de Los Lagos</p>
-        <p><strong>Presencia:</strong> Contamos con una sólida presencia en el sur de Chile, realizando proyectos en Osorno, Frutillar, Puerto Varas, Futrono y Pucón, adaptándonos a cada entorno y necesidad de nuestros clientes.</p>
-        <p><a href="https://wa.me/569XXXXXXXX">Contactar por WhatsApp</a></p>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+<section id="projects" class="section">
+    <h2>Proyectos destacados</h2>
+    <div class="projects">
+        <div class="project-card">
+            <img src="casa1.jpg" alt="Proyecto Osorno">
+            <h3>Proyecto Osorno</h3>
         </div>
-    </section>
+        <div class="project-card">
+            <img src="casa2.jpg" alt="Proyecto Frutillar">
+            <h3>Proyecto Frutillar</h3>
+        </div>
+        <div class="project-card">
+            <img src="casa3.jpg" alt="Proyecto Puerto Varas">
+            <h3>Proyecto Puerto Varas</h3>
+        </div>
+        <div class="project-card">
+            <img src="casa4.jpg" alt="Proyecto Futrono">
+            <h3>Proyecto Futrono</h3>
+        </div>
+        <div class="project-card">
+            <img src="casa5.jpg" alt="Proyecto Pucón">
+            <h3>Proyecto Pucón</h3>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 Constructora Properties Family. Todos los derechos reservados.</p>
-    </footer>
+<section id="testimonials" class="section">
+    <h2>Opiniones de nuestros clientes</h2>
+    <div class="testimonials">
+        <div class="testimonial-card">
+            <p>"Excelente trabajo, muy profesional y atento a los detalles. ¡Totalmente recomendable!"</p>
+            <strong>- Cliente Osorno</strong>
+        </div>
+        <div class="testimonial-card">
+            <p>"Cumplieron con todos los plazos y el resultado superó nuestras expectativas."</p>
+            <strong>- Cliente Frutillar</strong>
+        </div>
+        <div class="testimonial-card">
+            <p>"Muy buena planificación y ejecución, atentos a cada detalle del proyecto."</p>
+            <strong>- Cliente Puerto Varas</strong>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contacto y presencia</h2>
+    <p><strong>Oficina:</strong> Sector Pancul, Comuna de Los Lagos</p>
+    <p><strong>Presencia:</strong> Contamos con una sólida presencia en el sur de Chile, realizando proyectos en Osorno, Frutillar, Puerto Varas, Futrono y Pucón, adaptándonos a cada entorno y necesidad de nuestros clientes.</p>
+    <p><a href="https://wa.me/569XXXXXXXX">Contactar por WhatsApp</a></p>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<a href="https://wa.me/569XXXXXXXX" class="btn-whatsapp">💬</a>
+
+<footer>
+    <p>&copy; 2026 Constructora Properties Family. Todos los derechos reservados.</p>
+</footer>
+
 </body>
 </html>
