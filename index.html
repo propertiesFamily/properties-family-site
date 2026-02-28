@@ -6,34 +6,33 @@
 <title>Properties Family</title>
 
 <style>
-body {
+body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#ffffff;
-    color:#333;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f4efe6;
+    color:#2e2e2e;
 }
 
-header {
-    background:#000;
-    color:white;
-    padding:15px;
+header{
+    background:#2f3e2f;
+    padding:15px 40px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 }
 
-header img {
+header img{
     height:60px;
 }
 
-nav a {
-    color:#d4af37;
-    margin:0 15px;
+nav a{
+    color:#f4efe6;
+    margin-left:25px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:500;
 }
 
-.hero {
+.hero{
     background:url('casa1.jpg') center/cover no-repeat;
     height:90vh;
     display:flex;
@@ -41,105 +40,88 @@ nav a {
     justify-content:center;
     text-align:center;
     color:white;
+    background-color:rgba(0,0,0,0.45);
     background-blend-mode:darken;
-    background-color:rgba(0,0,0,0.5);
 }
 
-.hero h1 {
+.hero h1{
     font-size:48px;
+    margin:0;
 }
 
-.section {
-    padding:60px 20px;
+.hero p{
+    font-size:20px;
+    margin-top:15px;
+}
+
+.section{
+    padding:70px 20px;
     text-align:center;
 }
 
-.projects {
+.section h2{
+    color:#2f3e2f;
+    margin-bottom:30px;
+}
+
+.experience{
+    background:white;
+}
+
+.projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
+    max-width:1100px;
+    margin:auto;
 }
 
-.projects img {
+.projects img{
     width:100%;
     border-radius:10px;
 }
 
-.gold {
-    color:#d4af37;
+.services{
+    background:#e8e1d6;
 }
 
-.reviews {
-    background:#f8f8f8;
+.reviews{
+    background:white;
 }
 
-.contact img {
-    width:40px;
-    margin:10px;
+.contact{
+    background:#e8e1d6;
 }
 
-footer {
-    background:#000;
+.contact a{
+    text-decoration:none;
+    color:#2e2e2e;
+}
+
+.contact img{
+    width:65px;
+}
+
+footer{
+    background:#2f3e2f;
     color:white;
     text-align:center;
     padding:20px;
 }
-</style>
-</head>
 
-<body>
+/* Botón flotante WhatsApp */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
 
-<header>
-    <img src="logo.png" alt="Logo">
-    <nav>
-        <a href="#projects">Proyectos</a>
-        <a href="#reviews">Reseñas</a>
-        <a href="#contact">Contacto</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div>
-        <h1>Bienvenidos a <span class="gold">Properties Family</span></h1>
-        <p>Construcción · Corretaje · Inversión</p>
-    </div>
-</section>
-
-<section id="projects" class="section">
-    <h2 class="gold">Nuestros Proyectos</h2>
-    <div class="projects">
-        <img src="casa1.jpg">
-        <img src="casa2.jpg">
-        <img src="casa3.jpg">
-        <img src="casa4.jpg">
-    </div>
-</section>
-
-<section id="reviews" class="section reviews">
-    <h2 class="gold">Reseñas</h2>
-    <p>⭐️⭐️⭐️⭐️⭐️ Excelente atención y compromiso.</p>
-    <p>⭐️⭐️⭐️⭐️⭐️ Profesionalismo y calidad garantizada.</p>
-    <p>⭐️⭐️⭐️⭐️⭐️ Cumplen lo que prometen.</p>
-</section>
-
-<section class="section">
-    <h2 class="gold">Contamos con Gran Presencia</h2>
-    <p>Amplia trayectoria en el mercado inmobiliario y construcción en Chile.</p>
-</section>
-
-<section id="contact" class="section contact">
-    <h2 class="gold">Contacto</h2>
-    <p>Email: propertiesfamily@gmail.com</p>
-    <p>WhatsApp: +56 9 XXXX XXXX</p>
-    <div>
-        <img src="gmail.png" alt="Gmail">
-        <img src="whatsapp.png" alt="WhatsApp">
-    </div>
-</section>
-
-<footer>
-    © 2026 Properties Family - Todos los derechos reservados
-</footer>
-
-</body>
-</html>
+.whatsapp
