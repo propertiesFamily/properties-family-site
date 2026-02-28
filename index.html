@@ -13,6 +13,23 @@ body{
     color:#2b2b2b;
 }
 
+/* BARRA SUPERIOR */
+.topbar{
+    background:#000;
+    color:white;
+    padding:8px 20px;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+.topbar a{
+    color:#d6c3a5;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+/* HEADER */
 header{
     background:#1f1f1f;
     padding:15px 40px;
@@ -22,22 +39,21 @@ header{
 }
 
 header h1{
-    color:#ffffff;
+    color:#fff;
     margin:0;
     font-size:22px;
-    letter-spacing:1px;
 }
 
 nav a{
     color:#d6c3a5;
     margin-left:25px;
     text-decoration:none;
-    font-weight:500;
 }
 
+/* HERO */
 .hero{
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('casa1.jpg') center/cover no-repeat;
-    height:90vh;
+    height:85vh;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -47,7 +63,7 @@ nav a{
 }
 
 .hero h2{
-    font-size:48px;
+    font-size:45px;
     margin:0;
 }
 
@@ -56,24 +72,30 @@ nav a{
     margin-top:15px;
 }
 
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* SECCIONES */
 .section{
-    padding:80px 20px;
+    padding:70px 20px;
     text-align:center;
 }
 
 .section h2{
-    color:#1f1f1f;
     margin-bottom:30px;
     font-size:28px;
 }
 
-.experience{
-    background:#ffffff;
-}
-
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
     max-width:1100px;
     margin:auto;
@@ -94,9 +116,15 @@ nav a{
 }
 
 .reviews{
-    background:#ffffff;
+    background:white;
 }
 
+.review-box{
+    max-width:800px;
+    margin:20px auto;
+}
+
+/* CONTACTO */
 .contact{
     background:#f2ede6;
 }
@@ -106,10 +134,7 @@ nav a{
     color:#2b2b2b;
 }
 
-.contact img{
-    width:60px;
-}
-
+/* FOOTER */
 footer{
     background:#1f1f1f;
     color:white;
@@ -117,7 +142,7 @@ footer{
     padding:20px;
 }
 
-/* Botón flotante WhatsApp */
+/* BOTÓN FLOTANTE */
 .whatsapp-float{
     position:fixed;
     bottom:20px;
@@ -129,22 +154,29 @@ footer{
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-.whatsapp-float span{
-    color:white;
     font-size:26px;
+    color:white;
+    text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
+<div class="topbar">
+    <div>
+        📞 +56 9 3389 0368
+        <a href="mailto:Forestalramos.rj@gmail.com">📧 forestalramos.rj@gmail.com</a>
+    </div>
+    <div>
+        <a href="https://wa.me/56933890368" target="_blank">WhatsApp Directo</a>
+    </div>
+</div>
+
 <header>
     <h1>Properties Family</h1>
     <nav>
-        <a href="#experience">Experiencia</a>
+        <a href="#about">Nosotros</a>
         <a href="#projects">Proyectos</a>
         <a href="#contact">Contacto</a>
     </nav>
@@ -154,21 +186,20 @@ footer{
     <div>
         <h2>Proyectos Arquitectónicos y Construcción en Madera</h2>
         <p>Identidad del sur · Arquitectura moderna · Ejecución profesional</p>
-        <p>Construimos espacios combinando tradición en madera y diseño contemporáneo.</p>
+        <a class="btn" href="https://wa.me/56933890368" target="_blank">
+            Cotizar por WhatsApp
+        </a>
     </div>
 </section>
 
-<section id="experience" class="section experience">
+<section id="about" class="section">
     <h2>Nuestra Trayectoria</h2>
     <p>
-        Nuestra experiencia comienza como <strong>Forestal Ramos</strong>,
-        desarrollando proyectos en madera en el sur de Chile,
-        consolidando una base sólida de calidad y compromiso.
+        Iniciamos como <strong>Forestal Ramos</strong>, desarrollando proyectos en madera en el sur de Chile.
     </p>
     <p>
-        Hoy, como <strong>Properties Family</strong>, ampliamos nuestra visión hacia
-        proyectos arquitectónicos y construcción integral,
-        manteniendo la madera como sello distintivo.
+        Hoy como <strong>Properties Family</strong>, ejecutamos proyectos arquitectónicos y construcción integral,
+        combinando madera y arquitectura moderna con alto estándar técnico.
     </p>
 </section>
 
@@ -179,6 +210,7 @@ footer{
         <img src="casa2.jpg">
         <img src="casa3.jpg">
         <img src="casa4.jpg">
+        <img src="casa5.jpg">
     </div>
 </section>
 
@@ -189,32 +221,32 @@ footer{
     <p>Viviendas mixtas</p>
     <p>Hormigón</p>
     <p>Tiny House</p>
-    <p>Proyectos personalizados</p>
 </section>
 
 <section class="section reviews">
-    <h2>Reseñas</h2>
-    <p>★★★★★ Compromiso y profesionalismo en cada etapa.</p>
-    <p>★★★★★ Calidad constructiva y planificación responsable.</p>
-    <p>★★★★★ Confianza y respaldo técnico.</p>
+    <h2>Opiniones</h2>
+
+    <div class="review-box">
+        ⭐⭐⭐⭐⭐
+        <p>Excelente calidad y cumplimiento en cada proyecto.</p>
+    </div>
+
+    <div class="review-box">
+        ⭐⭐⭐⭐⭐
+        <p>Construcción sólida, moderna y con identidad del sur.</p>
+    </div>
+
+    <div class="review-box">
+        ⭐⭐⭐⭐⭐
+        <p>Profesionales responsables y comprometidos.</p>
+    </div>
+
 </section>
 
 <section id="contact" class="section contact">
     <h2>Contacto</h2>
-
-    <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap; margin-top:30px;">
-
-        <a href="mailto:Forestalramos.rj@gmail.com">
-            <img src="gmail.png" alt="Correo">
-            <p>Forestalramos.rj@gmail.com</p>
-        </a>
-
-        <a href="https://wa.me/56933890368" target="_blank">
-            <img src="whatsapp.png" alt="WhatsApp">
-            <p>+56 9 3389 0368</p>
-        </a>
-
-    </div>
+    <p>📞 +56 9 3389 0368</p>
+    <p>📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
 </section>
 
 <footer>
@@ -222,7 +254,7 @@ footer{
 </footer>
 
 <a href="https://wa.me/56933890368" class="whatsapp-float" target="_blank">
-    <span>💬</span>
+    💬
 </a>
 
 </body>
