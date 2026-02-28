@@ -8,120 +8,140 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #ffffff;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        background-color: #1e3a5f;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-    header img {
-        max-height: 80px;
-    }
-    nav {
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        font-weight: bold;
-    }
-    nav a {
-        text-decoration: none;
-        color: #ffffff;
-        transition: color 0.3s;
-    }
-    nav a:hover { color: #e67e22; }
-    
-    .hero {
-        text-align: center;
-        color: #fff;
-        padding: 120px 20px 80px 20px;
-        background: url('hero.jpg') center/cover no-repeat;
-        position: relative;
-    }
-    .hero::after {
-        content: '';
-        position: absolute;
-        top:0; left:0; width:100%; height:100%;
-        background-color: rgba(0,0,0,0.45);
-    }
-    .hero-content {
-        position: relative;
-        z-index: 1;
-    }
-    .hero h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-    .hero p {
-        font-size: 1.2em;
-        margin-bottom: 15px;
-    }
-    .hero a {
-        padding: 15px 30px;
-        background-color: #e67e22;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background 0.3s;
-    }
-    .hero a:hover { background-color: #d96b1f; }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    background-color:#F5F0E1; /* fondo cálido tipo madera clara */
+    color:#333;
+}
 
-    .section { padding: 60px 20px; }
-    .section h2 { text-align: center; font-family: 'Montserrat', sans-serif; color: #1e3a5f; margin-bottom: 40px; }
+/* Header */
+header {
+    background-color: #8B5E3C; /* marrón madera cálido */
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top:0;
+    z-index:100;
+}
+.logo-container {
+    display:inline-block;
+    padding: 8px 12px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.logo-container img {
+    height:70px;
+    display:block;
+}
+nav {
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    font-weight:bold;
+}
+nav a { color:#fff; text-decoration:none; transition: color 0.3s; }
+nav a:hover { color:#e67e22; }
 
-    /* Proyectos y slider */
-    .swiper { width: 100%; padding-bottom: 40px; }
-    .swiper-slide { background-color: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.3s; }
-    .swiper-slide:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
-    .swiper-slide img { width: 100%; display: block; }
-    .swiper-slide h3 { margin: 15px; color:#1e3a5f; }
-    .swiper-slide p { margin: 0 15px 15px 15px; }
+/* Hero */
+.hero {
+    text-align:center;
+    color:#fff;
+    padding:120px 20px 80px 20px;
+    background: url('sur-chile.jpg') center/cover no-repeat;
+    position: relative;
+}
+.hero::after {
+    content:'';
+    position:absolute;
+    top:0; left:0; width:100%; height:100%;
+    background-color: rgba(0,0,0,0.35);
+}
+.hero-content { position: relative; z-index:1; }
+.hero h2 {
+    font-family:'Montserrat',sans-serif;
+    font-size:3em;
+    margin-bottom:20px;
+}
+.hero p { font-size:1.2em; margin-bottom:15px; }
+.hero a {
+    padding:15px 30px;
+    background-color:#e67e22;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition: background 0.3s;
+}
+.hero a:hover { background-color:#d96b1f; }
 
-    /* Testimonios */
-    .testimonial-card { background-color: #f8f8f8; padding: 20px; border-radius: 12px; text-align: center; font-style: italic; }
+/* Section */
+.section { padding:60px 20px; background:#fff; border-radius:12px; margin:40px auto; max-width:1200px; }
+.section h2 { text-align:center; font-family:'Montserrat',sans-serif; color:#8B5E3C; margin-bottom:40px; }
 
-    /* Planificación */
-    .planning { display:flex; flex-wrap: wrap; gap:20px; justify-content:center; }
-    .planning-step { background:#fff; padding:20px; border-radius:12px; width:280px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
-    .planning-step:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
-    .planning-step h3 { color:#e67e22; margin-bottom:10px; }
+/* Planning */
+.planning { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.planning-step {
+    background:#fff; padding:20px; border-radius:12px; width:280px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.planning-step:hover { transform:translateY(-5px); box-shadow:0 6px 16px rgba(0,0,0,0.12); }
+.planning-step h3 { color:#e67e22; margin-bottom:10px; }
 
-    /* Formulario */
-    form input, form textarea { padding:10px; border-radius:8px; border:1px solid #ccc; width:100%; box-sizing:border-box; font-size:1em; transition: border-color 0.3s; }
-    form input:focus, form textarea:focus { border-color:#e67e22; outline:none; }
-    form button { padding:12px; background-color:#e67e22; color:#fff; border:none; border-radius:8px; font-weight:bold; cursor:pointer; font-size:1em; transition: background 0.3s; }
-    form button:hover { background-color:#d96b1f; }
+/* Slider Proyectos */
+.swiper { width:100%; padding-bottom:40px; }
+.swiper-slide {
+    background-color:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); overflow:hidden;
+    transition: transform 0.3s;
+}
+.swiper-slide:hover { transform:translateY(-5px); box-shadow:0 6px 16px rgba(0,0,0,0.12); }
+.swiper-slide img { width:100%; display:block; }
+.swiper-slide h3 { margin:15px; color:#8B5E3C; }
+.swiper-slide p { margin:0 15px 15px 15px; }
 
-    /* Contacto con íconos */
-    .contact-icons { display:flex; justify-content:center; gap:30px; margin-top:20px; font-size:1.2em; }
-    .contact-icons a { text-decoration:none; color:#1e3a5f; display:flex; align-items:center; gap:8px; transition: color 0.3s; }
-    .contact-icons a:hover { color:#e67e22; }
+/* Testimonios */
+.testimonial-card { background-color:#f8f8f8; padding:20px; border-radius:12px; text-align:center; font-style:italic; }
 
-    .btn-whatsapp { position: fixed; bottom:20px; right:20px; background-color:#25D366; color:#fff; padding:15px; border-radius:50%; font-size:24px; text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:100; transition: transform 0.3s, box-shadow 0.3s; }
-    .btn-whatsapp:hover { transform: scale(1.1); box-shadow:0 6px 16px rgba(0,0,0,0.3); }
+/* Formulario */
+form input, form textarea {
+    padding:10px; border-radius:8px; border:1px solid #ccc; width:100%; box-sizing:border-box; font-size:1em; transition:border-color 0.3s;
+}
+form input:focus, form textarea:focus { border-color:#e67e22; outline:none; }
+form button {
+    padding:12px; background-color:#e67e22; color:#fff; border:none; border-radius:8px; font-weight:bold; cursor:pointer; font-size:1em;
+    transition: background 0.3s;
+}
+form button:hover { background-color:#d96b1f; }
 
-    footer { background-color:#1e3a5f; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+/* Contacto */
+.contact-icons { display:flex; justify-content:center; gap:30px; margin-top:20px; font-size:1.2em; }
+.contact-icons a { text-decoration:none; color:#8B5E3C; display:flex; align-items:center; gap:8px; transition: color 0.3s; }
+.contact-icons a:hover { color:#e67e22; }
 
-    .map-container iframe { width:100%; height:300px; border:0; border-radius:12px; }
+/* WhatsApp flotante */
+.btn-whatsapp {
+    position: fixed; bottom:20px; right:20px; background-color:#25D366;
+    color:#fff; padding:15px; border-radius:50%; font-size:24px; text-decoration:none;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2); z-index:100; transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-whatsapp:hover { transform: scale(1.1); box-shadow:0 6px 16px rgba(0,0,0,0.3); }
 
+/* Footer */
+footer { background-color:#8B5E3C; color:#fff; text-align:center; padding:20px; margin-top:40px; border-radius:12px; }
+.map-container iframe { width:100%; height:300px; border:0; border-radius:12px; }
 </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Properties Family Logo">
+    <div class="logo-container">
+        <img src="logo.png" alt="Properties Family Logo">
+    </div>
     <nav>
         <a href="#about">Nosotros</a>
         <a href="#planning">Planificación</a>
@@ -192,10 +212,8 @@
                 <p>Casa de descanso con diseño funcional y materiales de alta durabilidad.</p>
             </div>
         </div>
-        <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
     </div>
 </section>
@@ -252,18 +270,14 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-    breakpoints: { 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    slidesPerView:1, spaceBetween:20, loop:true,
+    pagination:{ el:".swiper-pagination", clickable:true },
+    navigation:{ nextEl:".swiper-button-next", prevEl:".swiper-button-prev" },
+    breakpoints:{ 640:{ slidesPerView:1 }, 768:{ slidesPerView:2 }, 1024:{ slidesPerView:3 } }
   });
   const swiperTestimonials = new Swiper(".mySwiperTestimonials", {
-    slidesPerView: 1,
-    loop:true,
-    autoplay: { delay: 4000 },
-    pagination: { el: ".swiper-pagination", clickable:true }
+    slidesPerView:1, loop:true, autoplay:{ delay:4000 },
+    pagination:{ el:".swiper-pagination", clickable:true }
   });
 </script>
 
