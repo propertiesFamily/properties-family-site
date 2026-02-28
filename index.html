@@ -5,14 +5,19 @@
     <title>Properties Family</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { margin:0; font-family: Arial, sans-serif; background:#f5f5f5; }
-        header { background:#fff; padding:20px; display:flex; align-items:center; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
-        header img { height:50px; }
-        .slider img { width:100%; max-width:600px; display:block; margin:auto; margin-bottom:10px; }
+        body { margin:0; font-family: Arial, sans-serif; background:#f0f4f7; color:#333; }
+        header { background:#fff; padding:20px; display:flex; justify-content:center; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,0.15);}
+        header img { height:60px; }
+        .slider { margin:20px auto; max-width:800px; }
+        .slider img { width:100%; display:block; margin-bottom:15px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
         section { padding:50px 20px; max-width:1200px; margin:auto; }
         .icons { display:flex; justify-content:center; flex-wrap:wrap; margin-top:30px; }
-        .icons img { width:80px; margin:10px; }
+        .icons img { width:80px; margin:15px; }
+        .recommendations { background:#e0f7fa; padding:50px 20px; text-align:center; border-radius:10px; margin:50px 0; }
+        .recommendations h2 { margin-bottom:30px; font-size:2em; }
+        .recommendation-item { margin-bottom:20px; font-style:italic; background:#fff; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
         footer { text-align:center; padding:20px; background:#222; color:#fff; }
+        .field-image { width:100%; max-width:800px; display:block; margin:40px auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);}
     </style>
 </head>
 <body>
@@ -31,7 +36,12 @@
 
 <!-- Imagen del lago -->
 <section>
-    <img src="lago-sur.jpg" alt="Lago Sur" style="width:100%; max-width:800px; display:block; margin:auto;">
+    <img src="lago-sur.jpg" alt="Lago Sur" class="field-image">
+</section>
+
+<!-- Fondo tipo campo con vegetación -->
+<section>
+    <img src="campo.jpg" alt="Campo sur de Chile" class="field-image">
 </section>
 
 <!-- Íconos de proceso de construcción -->
@@ -40,6 +50,19 @@
     <img src="icon-material.png" alt="Materiales">
     <img src="icon-build.png" alt="Construcción">
     <img src="icon-delivery.png" alt="Entrega">
+</section>
+
+<!-- Sección de recomendaciones -->
+<section class="recommendations">
+    <h2>Recomendaciones de Clientes</h2>
+    <div class="recommendation-item">"Excelente servicio y atención, totalmente recomendable."</div>
+    <div class="recommendation-item">"La calidad de la construcción es impresionante y la entrega puntual."</div>
+    <div class="recommendation-item">"Nos encantó nuestra casa, igual que en la vista previa del sitio."</div>
+</section>
+
+<!-- Detalles rurales adicionales -->
+<section>
+    <img src="detalles-rurales.jpg" alt="Detalles rurales" class="field-image">
 </section>
 
 <!-- Footer -->
