@@ -43,14 +43,16 @@
         }
         .section h2 {
             color: #1e3a5f;
+            text-align: center;
+            margin-bottom: 30px;
         }
-        .projects, .planning {
+        .projects, .planning, .testimonials {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
         }
-        .project-card, .planning-step {
+        .project-card, .planning-step, .testimonial-card {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
@@ -94,6 +96,7 @@
             <a href="#about">Nosotros</a>
             <a href="#planning">Planificación</a>
             <a href="#projects">Proyectos</a>
+            <a href="#testimonials">Opiniones</a>
             <a href="#contact">Contacto</a>
         </nav>
     </header>
@@ -148,10 +151,28 @@
         </div>
     </section>
 
+    <section id="testimonials" class="section">
+        <h2>Opiniones de nuestros clientes</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p>"Excelente trabajo, muy profesional y atento a los detalles. ¡Totalmente recomendable!"</p>
+                <strong>- Cliente Osorno</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"Cumplieron con todos los plazos y el resultado superó nuestras expectativas."</p>
+                <strong>- Cliente Frutillar</strong>
+            </div>
+            <div class="testimonial-card">
+                <p>"Muy buena planificación y ejecución, atentos a cada detalle del proyecto."</p>
+                <strong>- Cliente Puerto Varas</strong>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="section">
-        <h2>Contacto</h2>
-        <p>Oficina: Sector Pancul, Comuna de Los Lagos</p>
-        <p>Presencia en: Osorno, Frutillar, Puerto Varas, Futrono, Pucón</p>
+        <h2>Contacto y presencia</h2>
+        <p><strong>Oficina:</strong> Sector Pancul, Comuna de Los Lagos</p>
+        <p><strong>Presencia:</strong> Contamos con una sólida presencia en el sur de Chile, realizando proyectos en Osorno, Frutillar, Puerto Varas, Futrono y Pucón, adaptándonos a cada entorno y necesidad de nuestros clientes.</p>
         <p><a href="https://wa.me/569XXXXXXXX">Contactar por WhatsApp</a></p>
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
