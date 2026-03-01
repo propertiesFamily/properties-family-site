@@ -4,29 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Constructora líder en el sur de Chile | Properties Family</title>
-<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Proyectos residenciales en madera en Los Ríos, Los Lagos y La Araucanía. Presencia en Pucón, Puerto Varas, Futrono, Osorno y Valdivia.">
+<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Proyectos residenciales de calidad con gran presencia en Pucón, Puerto Varas, Frutillar, Osorno, Valdivia y Futrono.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 a{text-decoration:none;}
-/* Topbar */
-.topbar{background:#000;color:white;padding:8px 20px;display:flex;justify-content:flex-end;flex-wrap:wrap;font-size:14px;}
+.topbar{background:#000;color:white;padding:8px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;font-size:14px;}
 .topbar a{color:#d6c3a5;margin-left:15px;}
-/* Header */
 header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
 header h1{color:#fff;margin:0;font-size:26px;}
 nav a{color:#d6c3a5;margin-left:25px;}
-/* Hero Slider */
 .hero-slider{position:relative;height:95vh;overflow:hidden;}
 .hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
 .hero-slide.active{opacity:1;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
 .hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
 .hero-overlay h2{font-family:'Playfair Display', serif;font-size:60px;font-weight:700;letter-spacing:1.5px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
-.hero-overlay p{font-size:24px;margin-top:20px;max-width:700px;}
+.hero-overlay p{font-size:24px;margin-top:20px;max-width:800px;}
 .btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
 .btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
-/* Secciones */
 .section{padding:100px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
 .section.show{opacity:1;transform:translateY(0);}
 .services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
@@ -74,15 +71,15 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 
 <div class="hero-overlay">
 <h2>Constructora líder en el sur de Chile</h2>
-<p>Proyectos habitacionales en madera con planificación profesional y resultados de calidad.</p>
+<p>Proyectos de calidad con gran presencia en <strong>Pucón, Puerto Varas, Frutillar, Osorno, Valdivia y Futrono</strong></p>
 <a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
 </div>
 </section>
 
 <section id="about" class="section">
 <h2>Sobre Nosotros</h2>
-<p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile, especializada en proyectos residenciales en madera.</p>
-<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando calidad, cumplimiento de plazos y resultados duraderos.</p>
+<p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile, especializada en proyectos residenciales de calidad.</p>
+<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando resultados duraderos.</p>
 </section>
 
 <section class="section services">
@@ -158,11 +155,8 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 <button type="submit">Enviar Solicitud</button>
 <input type="hidden" name="_captcha" value="false">
 </form>
-
-<h3>Oficina y Presencia</h3>
-<p>📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
 <p>📞 +56 9 3389 0368 | 📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
-<p>Gran presencia en Los Ríos, Los Lagos y La Araucanía.</p>
+<p>📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
 </section>
 
 <footer>
@@ -172,7 +166,6 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
-// Slider Hero
 let slides = document.querySelectorAll('.hero-slide');
 let current = 0;
 if(slides.length>0){
@@ -184,7 +177,6 @@ slides[current].classList.add('active');
 setInterval(nextSlide,5000);
 }
 
-// Fade-in secciones
 const sections = document.querySelectorAll('.section');
 if(sections.length>0){
 const observer = new IntersectionObserver((entries)=>{
