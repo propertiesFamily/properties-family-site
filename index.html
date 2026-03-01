@@ -4,95 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Constructora líder en el sur de Chile | Properties Family</title>
-<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Gran presencia en Pucón, Puerto Varas, Frutillar, Osorno, Valdivia y Futrono.">
+<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Proyectos residenciales con gran presencia en Pucón, Puerto Varas, Frutillar, Osorno, Valdivia y Futrono.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* --- Reset y Tipografía --- */
 body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 a{text-decoration:none;}
-
-/* --- Header --- */
 header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
 header h1{color:#fff;margin:0;font-size:26px;}
 nav a{color:#d6c3a5;margin-left:25px;}
-
-/* --- Hero Slider Mejorado --- */
 .hero-slider{position:relative;height:95vh;overflow:hidden;}
 .hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
 .hero-slide.active{opacity:1;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
-
-.hero-overlay {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    color:white;
-    padding:0 20px;
-}
-
-.hero-overlay h2 {
-    font-family:'Playfair Display', serif;
-    font-size:clamp(36px,6vw,64px);
-    font-weight:700;
-    letter-spacing:1.2px;
-    text-shadow:0 6px 15px rgba(0,0,0,0.6);
-    margin-bottom:15px;
-}
-
-.hero-overlay p {
-    font-size:clamp(18px,2.5vw,24px);
-    margin-top:20px;
-    max-width:720px;
-    line-height:1.5;
-    text-shadow:0 4px 10px rgba(0,0,0,0.4);
-}
-
-/* --- Botones Mejorados --- */
-.btn {
-    display:inline-block;
-    margin-top:25px;
-    padding:16px 32px;
-    background:linear-gradient(135deg,#A67C52,#C1A283);
-    color:white;
-    border-radius:12px;
-    font-weight:700;
-    box-shadow:0 8px 18px rgba(0,0,0,0.35);
-    transition:all 0.35s ease;
-}
-.btn:hover {
-    transform:translateY(-4px) scale(1.05);
-    box-shadow:0 12px 28px rgba(0,0,0,0.45);
-    background:linear-gradient(135deg,#C1A283,#A67C52);
-}
-
-/* --- Secciones --- */
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
+.hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;letter-spacing:1px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
+.hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;}
+.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
 .section{padding:100px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
 .section.show{opacity:1;transform:translateY(0);}
-
-/* --- Servicios --- */
 .services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
 .services li{margin:18px 0;font-size:18px;}
-
-/* --- Proyectos --- */
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;max-width:1100px;margin:auto;}
-.projects img{width:100%;border-radius:12px;transition:transform 0.6s ease, box-shadow 0.6s ease;}
-.projects img:hover{transform:scale(1.08) rotateZ(-1deg);box-shadow:0 15px 30px rgba(0,0,0,0.35);}
-
-/* --- Resultados --- */
+.projects img{width:100%;border-radius:12px;transition:transform 0.5s ease, box-shadow 0.5s ease;}
+.projects img:hover{transform:scale(1.05);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
 .results{background:#f9f6f0;padding:100px 20px;text-align:center;}
 .results h2{font-family:'Playfair Display', serif;font-size:42px;margin-bottom:15px;}
 .results p{font-size:20px;margin-bottom:50px;}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
-.results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.6s ease, box-shadow 0.6s ease;}
-.results-grid img:hover{transform:scale(1.08) rotateZ(-1deg);box-shadow:0 15px 30px rgba(0,0,0,0.35);}
-
-/* --- Opiniones --- */
+.results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
+.results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
 .reviews{background:#ffffff;}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
 .review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;transition:transform 0.5s ease, box-shadow 0.5s ease;}
@@ -100,16 +41,10 @@ nav a{color:#d6c3a5;margin-left:25px;}
 .review-card span{font-size:20px;color:#d4a017;}
 .review-card p{margin-top:15px;line-height:1.6;}
 .review-card strong{display:block;margin-top:15px;}
-
-/* --- CTA --- */
 .cta{background:#1f1f1f;color:white;padding:80px 20px;}
-
-/* --- Formulario --- */
 form input, form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}
 form button{background: linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s ease;}
 form button:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 20px rgba(0,0,0,0.25);}
-
-/* --- Footer y WhatsApp --- */
 footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:14px;}
 .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,0.3);transition:0.3s ease;}
 .whatsapp-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.35);}
@@ -127,15 +62,15 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </header>
 
 <section class="hero-slider">
-<div class="hero-slide active"><img src="casa1.jpg" onerror="this.src='placeholder.jpg';" alt="Proyecto Casa 1"></div>
-<div class="hero-slide"><img src="casa2.jpg" onerror="this.src='placeholder.jpg';" alt="Proyecto Casa 2"></div>
-<div class="hero-slide"><img src="casa3.jpg" onerror="this.src='placeholder.jpg';" alt="Proyecto Casa 3"></div>
+  <div class="hero-slide active"><img src="casa1.jpg" onerror="this.src='placeholder.jpg';" alt="Proyecto Casa 1"></div>
+  <div class="hero-slide"><img src="casa2.jpg" onerror="this.src='placeholder.jpg';" alt="Proyecto Casa 2"></div>
+  <div class="hero-slide"><img src="casa3.jpg" onerror="this.src='placeholder.jpg';" alt="Proyecto Casa 3"></div>
 
-<div class="hero-overlay">
-<h2>Líder en el sur de Chile</h2>
-<p>Construcción con gran presencia en Pucón, Puerto Varas, Frutillar, Osorno, Valdivia y Futrono.</p>
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
-</div>
+  <div class="hero-overlay">
+    <h2>Constructora líder en el sur de Chile</h2>
+    <p>Presencia consolidada en las regiones de Los Ríos, Los Lagos y La Araucanía</p>
+    <a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
+  </div>
 </section>
 
 <section id="about" class="section">
@@ -234,7 +169,7 @@ let current = 0;
 if(slides.length>0){
 function nextSlide(){
 slides[current].classList.remove('active');
-current=(current+1)%slides.length;
+current = (current+1)%slides.length;
 slides[current].classList.add('active');
 }
 setInterval(nextSlide,5000);
