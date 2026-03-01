@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Properties Family - Constructora sur de Chile</title>
-<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Proyectos residenciales en madera. Presencia en Pucón, Puerto Varas, Futrono, Osorno y Valdivia.">
+<title>Constructora líder en el sur de Chile | Properties Family</title>
+<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Proyectos residenciales en madera en Los Ríos, Los Lagos y La Araucanía. Presencia en Pucón, Puerto Varas, Futrono, Osorno y Valdivia.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 .topbar{background:#000;color:white;padding:8px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;font-size:14px;}
@@ -13,28 +14,28 @@ body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
 header h1{color:#fff;margin:0;font-size:26px;}
 nav a{color:#d6c3a5;margin-left:25px;text-decoration:none;}
-.hero-slider{position:relative;height:90vh;overflow:hidden;}
+.hero-slider{position:relative;height:95vh;overflow:hidden;}
 .hero-slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease-in-out;}
 .hero-slide.active{opacity:1;}
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;padding:0 20px;}
-.hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;letter-spacing:1px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
-.hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;}
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
+.hero-overlay h2{font-family:'Playfair Display', serif;font-size:60px;font-weight:700;letter-spacing:1.5px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
+.hero-overlay p{font-size:24px;margin-top:20px;max-width:700px;}
 .btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;text-decoration:none;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
 .btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
-.section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
+.section{padding:100px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
 .section.show{opacity:1;transform:translateY(0);}
 .services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
 .services li{margin:18px 0;font-size:18px;}
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;max-width:1100px;margin:auto;}
 .projects img{width:100%;border-radius:12px;transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .projects img:hover{transform:scale(1.05);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
-.results{background:#f9f6f0;padding:80px 20px;text-align:center;}
-.results h2{font-family:'Playfair Display', serif;font-size:40px;margin-bottom:15px;}
+.results{background:#f9f6f0;padding:100px 20px;text-align:center;}
+.results h2{font-family:'Playfair Display', serif;font-size:42px;margin-bottom:15px;}
 .results p{font-size:20px;margin-bottom:50px;}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
 .results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
-.reviews{background:#ffffff;padding:80px 20px;}
+.reviews{background:#ffffff;}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
 .review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .review-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,0.15);}
@@ -53,6 +54,7 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </head>
 <body>
 
+<!-- Topbar -->
 <div class="topbar">
 📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos  
 📞 +56 9 3389 0368  
@@ -69,10 +71,12 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </nav>
 </header>
 
+<!-- Hero Slider -->
 <section class="hero-slider">
-<div class="hero-slide active" style="background-image:url('casa1.webp');"></div>
-<div class="hero-slide" style="background-image:url('casa2.webp');"></div>
-<div class="hero-slide" style="background-image:url('casa3.webp');"></div>
+<div class="hero-slide active" style="background-image:url('casa1.jpg');"></div>
+<div class="hero-slide" style="background-image:url('casa2.jpg');"></div>
+<div class="hero-slide" style="background-image:url('casa3.jpg');"></div>
+
 <div class="hero-overlay">
 <h2>Constructora líder en el sur de Chile</h2>
 <p>Proyectos habitacionales en madera con planificación profesional y resultados de calidad.</p>
@@ -80,12 +84,14 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </div>
 </section>
 
+<!-- Sobre Nosotros -->
 <section id="about" class="section">
 <h2>Sobre Nosotros</h2>
 <p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile, especializada en proyectos residenciales en madera.</p>
-<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando calidad, cumplimiento de plazos y resultados duraderos. Trabajamos en las regiones de Los Ríos, Los Lagos y Araucanía, con mayor presencia en Pucón, Puerto Varas, Futrono, Osorno y Valdivia.</p>
+<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando calidad, cumplimiento de plazos y resultados duraderos.</p>
 </section>
 
+<!-- Por qué elegirnos -->
 <section class="section services">
 <h2>Por qué elegirnos</h2>
 <ul>
@@ -97,60 +103,70 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </ul>
 </section>
 
+<!-- Proyectos -->
 <section id="projects" class="section">
 <h2>Proyectos Destacados</h2>
 <div class="projects">
-<img src="casa1.webp" alt="Proyecto Casa 1">
-<img src="casa2.webp" alt="Proyecto Casa 2">
-<img src="casa3.webp" alt="Proyecto Casa 3">
-<img src="casa4.webp" alt="Proyecto Casa 4">
-<img src="casa5.webp" alt="Proyecto Casa 5">
+<img src="casa1.jpg" alt="Proyecto Casa 1">
+<img src="casa2.jpg" alt="Proyecto Casa 2">
+<img src="casa3.jpg" alt="Proyecto Casa 3">
+<img src="casa4.jpg" alt="Proyecto Casa 4">
+<img src="casa5.jpg" alt="Proyecto Casa 5">
 </div>
 </section>
 
+<!-- Resultados / Antes y Después -->
 <section class="section results">
 <h2>Resultados que hablan por nosotros</h2>
 <p>Proyectos ejecutados con excelencia y atención al detalle en toda la región sur de Chile.</p>
 <div class="results-grid">
-<img src="casa1.webp" alt="Proyecto Casa 1">
-<img src="casa2.webp" alt="Proyecto Casa 2">
-<img src="casa3.webp" alt="Proyecto Casa 3">
-<img src="casa4.webp" alt="Proyecto Casa 4">
-<img src="casa5.webp" alt="Proyecto Casa 5">
-<img src="casa6.webp" alt="Proyecto Casa 6">
+<img src="casa1.jpg" alt="Proyecto Casa 1">
+<img src="casa2.jpg" alt="Proyecto Casa 2">
+<img src="casa3.jpg" alt="Proyecto Casa 3">
+<img src="casa4.jpg" alt="Proyecto Casa 4">
+<img src="casa5.jpg" alt="Proyecto Casa 5">
+<img src="casa6.jpg" alt="Proyecto Casa 6">
 </div>
 </section>
 
-<section class="reviews section">
+<!-- Opiniones -->
+<section class="section reviews">
 <h2>Opiniones de Nuestros Clientes</h2>
 <div class="review-grid">
+
 <div class="review-card">
 <span>★★★★★</span>
 <p>Excelente calidad en la construcción y terminaciones. Nos acompañaron en todo el proceso y cumplieron lo acordado.</p>
-<strong>Denisse Cofré – Casa 120 m², Futrono</strong>
+<strong>Denisse Cofré – Casa de 120 m² en Futrono</strong>
 </div>
+
 <div class="review-card">
 <span>★★★★★</span>
 <p>Profesionales responsables y comprometidos con cada detalle de nuestro proyecto.</p>
-<strong>Martín Balmazabal – Casa 100 m², Puerto Varas</strong>
+<strong>Martín Balmazabal – Casa de 100 m² en Puerto Varas</strong>
 </div>
+
 <div class="review-card">
 <span>★★★★★</span>
 <p>Construcción sólida y moderna. Totalmente recomendados.</p>
-<strong>Máximo Soto – Casa 180 m², Valdivia</strong>
+<strong>Máximo Soto – Casa de 180 m² en Valdivia</strong>
 </div>
+
 </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
 <h2>¿Tienes un proyecto en mente?</h2>
 <p>Contacta a nuestro equipo profesional y hagamos realidad tu vivienda en el sur de Chile.</p>
 <a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
 </section>
 
-<section class="section" id="contact">
+<!-- Formulario -->
+<section class="section">
 <h2>Solicita tu Cotización</h2>
 <p>Cuéntanos tu proyecto y te responderemos a la brevedad.</p>
+
 <form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">
 <input type="text" name="Nombre" placeholder="Tu nombre" required>
 <input type="email" name="Correo" placeholder="Tu correo electrónico" required>
@@ -159,7 +175,13 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 <button type="submit">Enviar Solicitud</button>
 <input type="hidden" name="_captcha" value="false">
 </form>
-<p>📞 +56 9 3389 0368 | 📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
+</section>
+
+<!-- Contacto -->
+<section id="contact" class="section contact">
+<h2>Contacto</h2>
+<p>📞 +56 9 3389 0368</p>
+<p>📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
 <p>📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
 </section>
 
@@ -170,8 +192,26 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
-let slides=document.querySelectorAll('.hero-slide');let current=0;function nextSlide(){slides[current].classList.remove('active');current=(current+1)%slides.length;slides[current].classList.add('active');}setInterval(nextSlide,5000);
-const sections=document.querySelectorAll('.section');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');}});},{threshold:0.2});sections.forEach(section=>observer.observe(section));
+// Slider Hero
+let slides = document.querySelectorAll('.hero-slide');
+let current = 0;
+function nextSlide(){
+    slides[current].classList.remove('active');
+    current = (current+1)%slides.length;
+    slides[current].classList.add('active');
+}
+setInterval(nextSlide,5000);
+
+// Fade-in secciones
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
 </script>
 
 </body>
