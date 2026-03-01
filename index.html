@@ -1,174 +1,162 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>  <html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Constructora líder en el sur de Chile | Properties Family</title>  
+<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile.">  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">  <style>  
+body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}  
+a{text-decoration:none;}  
+header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}  
+header h1{color:#fff;margin:0;font-size:26px;}  
+nav a{color:#d6c3a5;margin-left:25px;}  
+  
+.hero-slider{position:relative;height:95vh;overflow:hidden;}  
+.hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}  
+.hero-slide.active{opacity:1;}  
+.hero-slide img{width:100%;height:100%;object-fit:cover;}  
+  
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;padding:20px;}  
+.hero-overlay h2{font-family:'Playfair Display',serif;font-size:50px;}  
+.hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;line-height:1.5;}  
+  
+.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}  
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}  
+  
+.section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}  
+.section.show{opacity:1;transform:translateY(0);}  
+  
+.services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}  
+.services li{margin:18px 0;font-size:18px;}  
+  
+.projects,.results-grid{  
+display:grid;  
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));  
+gap:30px;  
+max-width:1200px;  
+margin:auto;  
+}  
+  
+.projects img,.results-grid img{  
+width:100%;  
+border-radius:15px;  
+box-shadow:0 8px 20px rgba(0,0,0,0.12);  
+transition:transform 0.4s ease, box-shadow 0.4s ease;  
+}  
+.projects img:hover,.results-grid img:hover{  
+transform:scale(1.05);  
+box-shadow:0 12px 25px rgba(0,0,0,0.2);  
+}  
+  
+.results{background:#f9f6f0;padding:100px 20px;}  
+  
+.reviews{background:#ffffff;}  
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}  
+.review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;}  
+.review-card span{font-size:20px;color:#d4a017;}  
+  
+.cta{background:#1f1f1f;color:white;padding:80px 20px;}  
+  
+form input,form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}  
+form button{background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;}  
+  
+footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:14px;}  
+  
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,0.3);}  
+</style>  </head>  <body>  <header>  
+<h1>Properties Family</h1>  
+<nav>  
+<a href="#about">Nosotros</a>  
+<a href="#projects">Proyectos</a>  
+<a href="#contact">Contacto</a>  
+</nav>  
+</header>  <section class="hero-slider">  
+<div class="hero-slide active"><img src="casa1.jpg" loading="lazy" alt=""></div>  
+<div class="hero-slide"><img src="casa2.jpg" loading="lazy" alt=""></div>  
+<div class="hero-slide"><img src="casa3.jpg" loading="lazy" alt=""></div>  
+<div class="hero-slide"><img src="casa7.jpg" loading="lazy" alt=""></div>  <div class="hero-overlay">  
+<h2>Constructora líder en el sur de Chile</h2>  
+<p>Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón.</p>  
+<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>  
+</div>  
+</section>  <section id="about" class="section">  
+<h2>Sobre Nosotros</h2>  
+<p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile especializada en viviendas de alta calidad.</p>  
+</section>  <section class="section services">  
+<h2>Por qué elegirnos</h2>  
+<ul>  
+<li>✔ Experiencia comprobada</li>  
+<li>✔ Materiales de alta calidad</li>  
+<li>✔ Cumplimiento de plazos</li>  
+<li>✔ Supervisión técnica constante</li>  
+<li>✔ Garantía y confianza</li>  
+</ul>  
+</section>  <section id="projects" class="section">  
+<h2>Proyectos Destacados</h2>  
+<div class="projects">  
+<img src="casa1.jpg" loading="lazy" alt="">  
+<img src="casa2.jpg" loading="lazy" alt="">  
+<img src="casa3.jpg" loading="lazy" alt="">  
+<img src="casa4.jpg" loading="lazy" alt="">  
+<img src="casa5.jpg" loading="lazy" alt="">  
+<img src="casa7.jpg" loading="lazy" alt="">  
+</div>  
+</section>  <section class="section results">  
+<h2>Resultados que hablan por nosotros</h2>  
+<div class="results-grid">  
+<img src="casa1.jpg" loading="lazy" alt="">  
+<img src="casa2.jpg" loading="lazy" alt="">  
+<img src="casa3.jpg" loading="lazy" alt="">  
+<img src="casa4.jpg" loading="lazy" alt="">  
+<img src="casa5.jpg" loading="lazy" alt="">  
+<img src="casa6.jpg" loading="lazy" alt="">  
+<img src="casa7.jpg" loading="lazy" alt="">  
+</div>  
+</section>  <section class="section reviews">  
+<h2>Opiniones de Nuestros Clientes</h2>  
+<div class="review-grid">  
+<div class="review-card">  
+<span>★★★★★</span>  
+<p>Excelente calidad en la construcción.</p>  
+<strong>Cliente Futrono</strong>  
+</div>  
+<div class="review-card">  
+<span>★★★★★</span>  
+<p>Profesionales responsables y comprometidos.</p>  
+<strong>Cliente Puerto Varas</strong>  
+</div>  
+</div>  
+</section>  <section class="cta">  
+<h2>¿Tienes un proyecto en mente?</h2>  
+<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>  
+</section>  <section class="section" id="contact">  
+<h2>Solicita tu Cotización</h2>  
+<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">  
+<input type="text" name="Nombre" placeholder="Tu nombre" required>  
+<input type="email" name="Correo" placeholder="Tu correo electrónico" required>  
+<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>  
+<button type="submit">Enviar Solicitud</button>  
+<input type="hidden" name="_captcha" value="false">  
+</form>  
+</section>  <footer>  
+© 2026 Properties Family  
+</footer>  <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
 
-<title>Constructora en Valdivia y Sur de Chile | Properties Family</title>
-
-<meta name="description" content="Constructora en Valdivia, Futrono, Osorno y Puerto Varas. Especialistas en construcción de casas en el sur de Chile. Properties Family.">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-<style>
-body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
-a{text-decoration:none;}
-header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
-header h1{color:#fff;margin:0;font-size:26px;}
-nav a{color:#d6c3a5;margin-left:25px;}
-
-.hero-slider{position:relative;height:95vh;overflow:hidden;}
-.hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
-.hero-slide.active{opacity:1;}
-.hero-slide img{width:100%;height:100%;object-fit:cover;}
-
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;padding:20px;}
-.hero-overlay h2{font-family:'Playfair Display',serif;font-size:48px;}
-.hero-overlay p{font-size:20px;margin-top:20px;max-width:750px;line-height:1.6;}
-
-.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
-.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
-
-.section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
-.section.show{opacity:1;transform:translateY(0);}
-
-.services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
-.services li{margin:18px 0;font-size:18px;}
-
-.projects,.results-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-max-width:1200px;
-margin:auto;
-}
-
-.projects img,.results-grid img{
-width:100%;
-border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.12);
-transition:transform 0.4s ease, box-shadow 0.4s ease;
-}
-.projects img:hover,.results-grid img:hover{
-transform:scale(1.05);
-box-shadow:0 12px 25px rgba(0,0,0,0.2);
-}
-
-.results{background:#f9f6f0;padding:100px 20px;}
-
-.reviews{background:#ffffff;}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
-.review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;}
-.review-card span{font-size:20px;color:#d4a017;}
-
-.cta{background:#1f1f1f;color:white;padding:80px 20px;}
-
-form input,form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}
-form button{background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;}
-
-footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:14px;}
-
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,0.3);}
-</style>
-</head>
-
-<body>
-
-<header>
-<h1>Properties Family</h1>
-<nav>
-<a href="#about">Nosotros</a>
-<a href="#projects">Proyectos</a>
-<a href="#contact">Contacto</a>
-</nav>
-</header>
-
-<section class="hero-slider">
-<div class="hero-slide active"><img src="casa8.jpg" loading="lazy" alt="Casa moderna construida en Valdivia sur de Chile"></div>
-<div class="hero-slide"><img src="casa1.jpg" loading="lazy" alt="Construcción de vivienda en Futrono"></div>
-<div class="hero-slide"><img src="casa2.jpg" loading="lazy" alt="Casa en Osorno sur de Chile"></div>
-<div class="hero-slide"><img src="casa3.jpg" loading="lazy" alt="Casa moderna en Puerto Varas"></div>
-<div class="hero-slide"><img src="casa7.jpg" loading="lazy" alt="Proyecto residencial en Frutillar"></div>
-
-<div class="hero-overlay">
-<h2>Constructora en Valdivia y Sur de Chile</h2>
-<p>Especialistas en construcción de casas en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón. Trabajamos en las regiones de Los Ríos, Los Lagos y La Araucanía.</p>
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
-</div>
-</section>
-
-<section id="about" class="section">
-<h2>Constructora consolidada en el sur de Chile</h2>
-<p>Iniciamos como Forestal Ramos y hoy somos Properties Family. Nos especializamos en construcción de viviendas modernas, eficientes y de alta calidad en el sur de Chile.</p>
-</section>
-
-<section id="projects" class="section">
-<h2>Proyectos Destacados</h2>
-<div class="projects">
-<img src="casa8.jpg" loading="lazy" alt="Proyecto reciente construido en Valdivia">
-<img src="casa1.jpg" loading="lazy" alt="Casa en Futrono">
-<img src="casa2.jpg" loading="lazy" alt="Casa en Osorno">
-<img src="casa3.jpg" loading="lazy" alt="Casa en Puerto Varas">
-<img src="casa4.jpg" loading="lazy" alt="Casa en región de Los Ríos">
-<img src="casa5.jpg" loading="lazy" alt="Casa moderna sur de Chile">
-<img src="casa7.jpg" loading="lazy" alt="Vivienda en Frutillar">
-</div>
-</section>
-
-<section class="section results">
-<h2>Resultados que hablan por nosotros</h2>
-<div class="results-grid">
-<img src="casa8.jpg" loading="lazy" alt="Casa terminada en Valdivia">
-<img src="casa1.jpg" loading="lazy" alt="">
-<img src="casa2.jpg" loading="lazy" alt="">
-<img src="casa3.jpg" loading="lazy" alt="">
-<img src="casa4.jpg" loading="lazy" alt="">
-<img src="casa5.jpg" loading="lazy" alt="">
-<img src="casa6.jpg" loading="lazy" alt="">
-<img src="casa7.jpg" loading="lazy" alt="">
-</div>
-</section>
-
-<section class="cta">
-<h2>¿Quieres construir tu casa en el sur de Chile?</h2>
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
-</section>
-
-<section class="section" id="contact">
-<h2>Solicita tu Cotización</h2>
-<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">
-<input type="text" name="Nombre" placeholder="Tu nombre" required>
-<input type="email" name="Correo" placeholder="Tu correo electrónico" required>
-<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>
-<button type="submit">Enviar Solicitud</button>
-<input type="hidden" name="_captcha" value="false">
-</form>
-</section>
-
-<footer>
-© 2026 Properties Family
-</footer>
-
-<a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
-
-<script>
-let slides=document.querySelectorAll('.hero-slide');
-let current=0;
-function nextSlide(){
-slides[current].classList.remove('active');
-current=(current+1)%slides.length;
-slides[current].classList.add('active');
-}
-setInterval(nextSlide,5000);
-
-const sections=document.querySelectorAll('.section');
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('show');}
-});
-},{threshold:0.2});
-sections.forEach(section=>observer.observe(section));
-</script>
-
-</body>
+<script>  
+let slides=document.querySelectorAll('.hero-slide');  
+let current=0;  
+function nextSlide(){  
+slides[current].classList.remove('active');  
+current=(current+1)%slides.length;  
+slides[current].classList.add('active');  
+}  
+setInterval(nextSlide,5000);  
+  
+const sections=document.querySelectorAll('.section');  
+const observer=new IntersectionObserver((entries)=>{  
+entries.forEach(entry=>{  
+if(entry.isIntersecting){entry.target.classList.add('show');}  
+});  
+},{threshold:0.2});  
+sections.forEach(section=>observer.observe(section));  
+</script>  </body>  
 </html>
