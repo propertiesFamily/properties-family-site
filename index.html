@@ -1,38 +1,39 @@
-<!DOCTYPE html>  <html lang="es">    <head>    
-<meta charset="UTF-8">    
-<meta name="viewport" content="width=device-width, initial-scale=1.0">    
-<title>Constructora líder en el sur de Chile | Properties Family</title>    
-<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Contamos con gran presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón. Área de trabajo en las regiones de Los Ríos, Los Lagos y La Araucanía.">    
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">    
-<style>    
-body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}    
-a{text-decoration:none;}    
-.topbar{display:none;}    
-header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}    
-header h1{color:#fff;margin:0;font-size:26px;}    
-nav a{color:#d6c3a5;margin-left:25px;}    
-.hero-slider{position:relative;height:95vh;overflow:hidden;}    
-.hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}    
-.hero-slide.active{opacity:1;}    
-.hero-slide img{width:100%;height:100%;object-fit:cover;}    
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}    
-.hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;letter-spacing:1px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}    
-.hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;line-height:1.5;}    
-.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}    
-.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}    
-.section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}    
-.section.show{opacity:1;transform:translateY(0);}    
-.services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}    
-.services li{margin:18px 0;font-size:18px;}  /* Proyectos Destacados más delicados */  
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:auto;}  
-.projects img{width:100%;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.12);transition:transform 0.4s ease, box-shadow 0.4s ease;}  
-.projects img:hover{transform:scale(1.03);box-shadow:0 6px 12px rgba(0,0,0,0.15);filter:brightness(1.05);cursor:pointer;}  .results{background:#f9f6f0;padding:100px 20px;text-align:center;}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructora líder en el sur de Chile | Properties Family</title>
+<meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Contamos con gran presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón. Área de trabajo en las regiones de Los Ríos, Los Lagos y La Araucanía.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
+a{text-decoration:none;}
+header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
+header h1{color:#fff;margin:0;font-size:26px;}
+nav a{color:#d6c3a5;margin-left:25px;}
+.hero-slider{position:relative;height:95vh;overflow:hidden;}
+.hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
+.hero-slide.active{opacity:1;}
+.hero-slide img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
+.hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;letter-spacing:1px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
+.hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;line-height:1.5;}
+.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
+.section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
+.section.show{opacity:1;transform:translateY(0);}
+.services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
+.services li{margin:18px 0;font-size:18px;}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:auto;}
+.projects img{width:100%;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.12);transition:transform 0.4s ease, box-shadow 0.4s ease;}
+.projects img:hover{transform:scale(1.03);box-shadow:0 6px 12px rgba(0,0,0,0.15);filter:brightness(1.05);cursor:pointer;}
+.results{background:#f9f6f0;padding:100px 20px;text-align:center;}
 .results h2{font-family:'Playfair Display', serif;font-size:42px;margin-bottom:15px;}
 .results p{font-size:20px;margin-bottom:50px;}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
 .results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
-
 .reviews{background:#ffffff;}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
 .review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;transition:transform 0.5s ease, box-shadow 0.5s ease;}
@@ -40,129 +41,174 @@ nav a{color:#d6c3a5;margin-left:25px;}
 .review-card span{font-size:20px;color:#d4a017;}
 .review-card p{margin-top:15px;line-height:1.6;}
 .review-card strong{display:block;margin-top:15px;}
-
 .cta{background:#1f1f1f;color:white;padding:80px 20px;}
 form input, form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}
 form button{background: linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s ease;}
 form button:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 20px rgba(0,0,0,0.25);}
-
 footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:14px;}
 .whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,0.3);transition:0.3s ease;}
 .whatsapp-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.35);}
 </style>
+</head>
+<body>
 
-</head>    
-<body>  <header>    
-<h1>Properties Family</h1>    
-<nav>    
-<a href="#about">Nosotros</a>    
-<a href="#projects">Proyectos</a>    
-<a href="#contact">Contacto</a>    
-</nav>    
-</header>  <section class="hero-slider">    
-<div class="hero-slide active"><img src="casa1.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Futrono 120 m²"></div>    
-<div class="hero-slide"><img src="casa2.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Valdivia 100 m²"></div>    
-<div class="hero-slide"><img src="casa3.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Puerto Varas 180 m²"></div>  <div class="hero-overlay">    
-<h2>Constructora líder en el sur de Chile</h2>    
-<p>Contamos con gran presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón.<br>    
-Nuestra área de trabajo abarca las regiones de Los Ríos, Los Lagos y La Araucanía.</p>    
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>    
-</div>    
-</section>  <section id="about" class="section">    
-<h2>Sobre Nosotros</h2>    
-<p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile, especializada en proyectos de calidad.</p>    
-<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando resultados duraderos.</p>    
-</section>  <section class="section services">    
-<h2>Por qué elegirnos</h2>    
-<ul>    
-<li>✔ Experiencia comprobada en la región sur</li>    
-<li>✔ Materiales de alta calidad</li>    
-<li>✔ Cumplimiento de plazos</li>    
-<li>✔ Supervisión técnica constante</li>    
-<li>✔ Garantía y confianza</li>    
-</ul>    
-</section>  <section id="projects" class="section">    
-<h2>Proyectos Destacados</h2>    
-<p style="color:#555;font-size:18px;margin-top:10px;">Viviendas de madera de alta calidad con diseño moderno y funcional.</p>    
-<div class="projects">    
-<img src="casa1.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa en Futrono 120 m²">    
-<img src="casa2.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa en Valdivia 100 m²">    
-<img src="casa3.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa en Puerto Varas 180 m²">    
-<img src="casa4.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa en Osorno 150 m²">    
-<img src="casa5.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa en Pucón 140 m²">    
-</div>    
-</section>  <section class="section results">    
-<h2>Resultados que hablan por nosotros</h2>    
-<p>Proyectos ejecutados con excelencia y atención al detalle en toda la región sur de Chile.</p>    
-<div class="results-grid">    
-<img src="casa1.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Proyecto Futrono">    
-<img src="casa2.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Proyecto Valdivia">    
-<img src="casa3.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Proyecto Puerto Varas">    
-<img src="casa4.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Proyecto Osorno">    
-<img src="casa5.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Proyecto Pucón">    
-<img src="casa6.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Proyecto Frutillar">    
-</div>    
-</section>  <section class="section reviews">    
-<h2>Opiniones de Nuestros Clientes</h2>    
-<div class="review-grid">    
-<div class="review-card">    
-<span>★★★★★</span>    
-<p>Excelente calidad en la construcción y terminaciones. Nos acompañaron en todo el proceso y cumplieron lo acordado.</p>    
-<strong>Denisse Cofré – Casa 120 m², Futrono</strong>    
-</div>    
-<div class="review-card">    
-<span>★★★★★</span>    
-<p>Profesionales responsables y comprometidos con cada detalle de nuestro proyecto.</p>    
-<strong>Martín Balmazabal – Casa 100 m², Puerto Varas</strong>    
-</div>    
-<div class="review-card">    
-<span>★★★★★</span>    
-<p>Construcción sólida y moderna. Totalmente recomendados.</p>    
-<strong>Máximo Soto – Casa 180 m², Valdivia</strong>    
-</div>    
-</div>    
-</section>  <section class="cta">    
-<h2>¿Tienes un proyecto en mente?</h2>    
-<p>Contacta a nuestro equipo profesional y hagamos realidad tu vivienda en el sur de Chile.</p>    
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>    
-</section>  <section class="section" id="contact">    
-<h2>Solicita tu Cotización</h2>    
-<p>Cuéntanos tu proyecto y te responderemos a la brevedad.</p>    
-<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">    
-<input type="text" name="Nombre" placeholder="Tu nombre" required>    
-<input type="email" name="Correo" placeholder="Tu correo electrónico" required>    
-<input type="text" name="Telefono" placeholder="Teléfono">    
-<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>    
-<button type="submit">Enviar Solicitud</button>    
-<input type="hidden" name="_captcha" value="false">    
-</form>    
-<p>📞 +56 9 3389 0368 | 📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>    
-<p>📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>    
-</section>  <footer>    
-© 2026 Properties Family | Forestal Ramos    
-</footer>  <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>  <script>    
-// Slider Hero    
-let slides = document.querySelectorAll('.hero-slide');    
-let current = 0;    
-if(slides.length>0){    
-function nextSlide(){    
-slides[current].classList.remove('active');    
-current = (current+1)%slides.length;    
-slides[current].classList.add('active');    
-}    
-setInterval(nextSlide,5000);    
-}    
-    
-// Fade-in secciones    
-const sections = document.querySelectorAll('.section');    
-if(sections.length>0){    
-const observer = new IntersectionObserver((entries)=>{    
-entries.forEach(entry=>{    
-if(entry.isIntersecting){    
-entry.target.classList.add('show');    
-}    
-});    
-},{threshold:0.2});    
-sections.forEach(section=>observer.observe(section));    
-}    
-</script>  </body>    </html>    
+<header>
+<h1>Properties Family</h1>
+<nav>
+<a href="#about">Nosotros</a>
+<a href="#projects">Proyectos</a>
+<a href="#contact">Contacto</a>
+</nav>
+</header>
+
+<section class="hero-slider">
+<div class="hero-slide active"><img src="casa1.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Futrono 120 m²"></div>
+<div class="hero-slide"><img src="casa2.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Valdivia 100 m²"></div>
+<div class="hero-slide"><img src="casa3.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Puerto Varas 180 m²"></div>
+<div class="hero-slide"><img src="casa4.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Osorno 150 m²"></div>
+<div class="hero-slide"><img src="casa5.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Pucón 140 m²"></div>
+<div class="hero-slide"><img src="casa6.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Frutillar 130 m²"></div>
+<div class="hero-slide"><img src="casa7.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Puerto Varas 160 m²"></div>
+<div class="hero-slide"><img src="casa8.jpg" loading="lazy" onerror="this.src='placeholder.jpg';" alt="Casa moderna en Osorno 150 m²"></div>
+
+<div class="hero-overlay">
+<h2>Constructora líder en el sur de Chile</h2>
+<p>Contamos con gran presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón.<br>
+Nuestra área de trabajo abarca las regiones de Los Ríos, Los Lagos y La Araucanía.</p>
+<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
+</div>
+</section>
+
+<section id="about" class="section">
+<h2>Sobre Nosotros</h2>
+<p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile, especializada en proyectos de calidad.</p>
+<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando resultados duraderos.</p>
+</section>
+
+<section class="section services">
+<h2>Por qué elegirnos</h2>
+<ul>
+<li>✔ Experiencia comprobada en la región sur</li>
+<li>✔ Materiales de alta calidad</li>
+<li>✔ Cumplimiento de plazos</li>
+<li>✔ Supervisión técnica constante</li>
+<li>✔ Garantía y confianza</li>
+</ul>
+</section>
+
+<section id="projects" class="section">
+<h2>Proyectos Destacados</h2>
+<p style="color:#555;font-size:18px;margin-top:10px;">Viviendas de madera de alta calidad con diseño moderno y funcional.</p>
+<div class="projects">
+<img src="casa1.jpg" alt="Casa en Futrono 120 m²">
+<img src="casa2.jpg" alt="Casa en Valdivia 100 m²">
+<img src="casa3.jpg" alt="Casa en Puerto Varas 180 m²">
+<img src="casa4.jpg" alt="Casa en Osorno 150 m²">
+<img src="casa5.jpg" alt="Casa en Pucón 140 m²">
+<img src="casa6.jpg" alt="Casa en Frutillar 130 m²">
+<img src="casa7.jpg" alt="Casa en Puerto Varas 160 m²">
+<img src="casa8.jpg" alt="Casa en Osorno 150 m²">
+</div>
+</section>
+
+<section class="section results">
+<h2>Resultados que hablan por nosotros</h2>
+<p>Proyectos ejecutados con excelencia y atención al detalle en toda la región sur de Chile.</p>
+<div class="results-grid">
+<img src="casa1.jpg" alt="Proyecto Futrono">
+<img src="casa2.jpg" alt="Proyecto Valdivia">
+<img src="casa3.jpg" alt="Proyecto Puerto Varas">
+<img src="casa4.jpg" alt="Proyecto Osorno">
+<img src="casa5.jpg" alt="Proyecto Pucón">
+<img src="casa6.jpg" alt="Proyecto Frutillar">
+<img src="casa7.jpg" alt="Proyecto Puerto Varas">
+<img src="casa8.jpg" alt="Proyecto Osorno">
+</div>
+</section>
+
+<section class="section reviews">
+<h2>Opiniones de Nuestros Clientes</h2>
+<div class="review-grid">
+<div class="review-card">
+<span>★★★★★</span>
+<p>Excelente calidad en la construcción y terminaciones. Nos acompañaron en todo el proceso y cumplieron lo acordado.</p>
+<strong>Denisse Cofré – Casa 120 m², Futrono</strong>
+</div>
+<div class="review-card">
+<span>★★★★★</span>
+<p>Profesionales responsables y comprometidos con cada detalle de nuestro proyecto.</p>
+<strong>Martín Balmazabal – Casa 100 m², Puerto Varas</strong>
+</div>
+<div class="review-card">
+<span>★★★★★</span>
+<p>Construcción sólida y moderna. Totalmente recomendados.</p>
+<strong>Máximo Soto – Casa 180 m², Valdivia</strong>
+</div>
+<div class="review-card">
+<span>★★★★★</span>
+<p>Servicio impecable y atención personalizada.</p>
+<strong>Carla Méndez – Casa 140 m², Pucón</strong>
+</div>
+<div class="review-card">
+<span>★★★★★</span>
+<p>Recomiendo Properties Family por su profesionalismo y calidad.</p>
+<strong>Javier Aravena – Casa 150 m², Osorno</strong>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>¿Tienes un proyecto en mente?</h2>
+<p>Contacta a nuestro equipo profesional y hagamos realidad tu vivienda en el sur de Chile.</p>
+<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
+</section>
+
+<section class="section" id="contact">
+<h2>Solicita tu Cotización</h2>
+<p>Cuéntanos tu proyecto y te responderemos a la brevedad.</p>
+<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">
+<input type="text" name="Nombre" placeholder="Tu nombre" required>
+<input type="email" name="Correo" placeholder="Tu correo electrónico" required>
+<input type="text" name="Telefono" placeholder="Teléfono">
+<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>
+<button type="submit">Enviar Solicitud</button>
+<input type="hidden" name="_captcha" value="false">
+</form>
+<p>📞 +56 9 3389 0368 | 📧 <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
+<p>📍 Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
+</section>
+
+<footer>
+© 2026 Properties Family | Forestal Ramos
+</footer>
+
+<a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+// Slider Hero
+let slides = document.querySelectorAll('.hero-slide');
+let current = 0;
+if(slides.length>0){
+function nextSlide(){
+slides[current].classList.remove('active');
+current = (current+1)%slides.length;
+slides[current].classList.add('active');
+}
+setInterval(nextSlide,5000);
+}
+
+// Fade-in secciones
+const sections = document.querySelectorAll('.section');
+if(sections.length>0){
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
+}
+</script>
+</body>
+</html>
