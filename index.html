@@ -10,7 +10,7 @@
 body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 a{text-decoration:none;}
 header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
-header h1{color:#fff;margin:0;font-size:26px;}
+header img{height:50px;}
 nav a{color:#d6c3a5;margin-left:25px;}
 .hero-slider{position:relative;height:95vh;overflow:hidden;}
 .hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
@@ -30,7 +30,6 @@ nav a{color:#d6c3a5;margin-left:25px;}
 .projects img:hover{transform:scale(1.03);box-shadow:0 6px 12px rgba(0,0,0,0.15);filter:brightness(1.05);cursor:pointer;}
 .results{background:#f9f6f0;padding:100px 20px;text-align:center;}
 .results h2{font-family:'Playfair Display', serif;font-size:42px;margin-bottom:15px;}
-.results p{font-size:20px;margin-bottom:50px;}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
 .results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
@@ -53,7 +52,7 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 <body>
 
 <header>
-<h1></h1> <!-- Logo vacío -->
+<img src="logo.png" alt="Logo Properties Family"> <!-- Logo agregado -->
 <nav>
 <a href="#about">Nosotros</a>
 <a href="#projects">Proyectos</a>
@@ -62,15 +61,14 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </header>
 
 <section class="hero-slider">
-<!-- Todas las imágenes del repositorio -->
-<div class="hero-slide active"><img src="casa1.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa3.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa4.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa5.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa6.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa7.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa8.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
-<div class="hero-slide"><img src="casa10.jpg" loading="lazy" onerror="this.src='placeholder.jpg';"></div>
+<div class="hero-slide active"><img src="casa1.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa3.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa4.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa5.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa6.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa7.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa8.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa10.jpg" loading="lazy"></div>
 
 <div class="hero-overlay">
 <h2>Constructora líder en el sur de Chile</h2>
@@ -128,8 +126,8 @@ Nuestra área de trabajo abarca las regiones de Los Ríos, Los Lagos y La Arauca
 <section class="section reviews">
 <h2>Opiniones de Nuestros Clientes</h2>
 <div class="review-grid">
-<div class="review-card"><span>★★★★★</span><p>Excelente calidad en la construcción y terminaciones. Nos acompañaron en todo el proceso y cumplieron lo acordado.</p></div>
-<div class="review-card"><span>★★★★★</span><p>Profesionales responsables y comprometidos con cada detalle de nuestro proyecto.</p></div>
+<div class="review-card"><span>★★★★★</span><p>Excelente calidad en la construcción y terminaciones.</p></div>
+<div class="review-card"><span>★★★★★</span><p>Profesionales responsables y comprometidos con cada detalle.</p></div>
 <div class="review-card"><span>★★★★★</span><p>Construcción sólida y moderna. Totalmente recomendados.</p></div>
 <div class="review-card"><span>★★★★★</span><p>Servicio impecable y atención personalizada.</p></div>
 </div>
@@ -150,6 +148,9 @@ Nuestra área de trabajo abarca las regiones de Los Ríos, Los Lagos y La Arauca
 <button type="submit">Enviar Solicitud</button>
 <input type="hidden" name="_captcha" value="false">
 </form>
+<p>📞 WhatsApp: <a href="https://wa.me/56933890368" target="_blank">+56 9 3389 0368</a></p>
+<p>📧 Email: <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
+<p>📍 Dirección: Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
 </section>
 
 <footer>
