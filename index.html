@@ -10,61 +10,42 @@
 <style>
 body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 a{text-decoration:none;}
-
 header{background:#000;padding:18px 60px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);}
 header img{height:50px;}
 nav a{color:#d6c3a5;margin-left:25px;}
-
 .hero-slider{position:relative;height:95vh;overflow:hidden;}
 .hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
 .hero-slide.active{opacity:1;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
-
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
-.hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.55);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;padding:20px;}
+.hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;letter-spacing:1px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
 .hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;line-height:1.5;}
-
-.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s;}
-.btn:hover{transform:translateY(-3px);}
-
+.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
 .section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
 .section.show{opacity:1;transform:translateY(0);}
-
 .services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
 .services li{margin:18px 0;font-size:18px;}
-
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:auto;}
-
-.project-card{background:#fffdf8;padding:20px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.08);transition:0.4s;}
-.project-card:hover{transform:translateY(-8px);box-shadow:0 15px 30px rgba(0,0,0,0.15);}
-.project-card img{width:100%;border-radius:15px;cursor:pointer;}
-.project-card h3{margin-top:15px;font-family:'Playfair Display', serif;font-size:22px;}
-.project-card p{margin-top:6px;font-size:16px;color:#5a5a5a;}
-
-.project-btn{display:inline-block;margin-top:12px;padding:10px 20px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-size:14px;font-weight:600;}
-
-.projects-description{max-width:800px;margin:20px auto 50px;font-size:18px;color:#555;line-height:1.6;}
-
+.projects img{width:100%;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.12);transition:transform 0.4s ease, box-shadow 0.4s ease;}
+.projects img:hover{transform:scale(1.03);box-shadow:0 6px 12px rgba(0,0,0,0.15);filter:brightness(1.05);cursor:pointer;}
 .results{background:#f9f6f0;padding:100px 20px;text-align:center;}
+.results h2{font-family:'Playfair Display', serif;font-size:42px;margin-bottom:15px;}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
-.results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);}
-
-.reviews{background:#ffffff;}
+.results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
+.results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
-.review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);}
+.review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;transition:transform 0.5s ease, box-shadow 0.5s ease;}
+.review-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,0.15);}
 .review-card span{font-size:20px;color:#d4a017;}
-
+.review-card p{margin-top:15px;line-height:1.6;}
 .cta{background:#1f1f1f;color:white;padding:80px 20px;}
-
 form input, form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}
-form button{background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;}
-
+form button{background: linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s ease;}
+form button:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 20px rgba(0,0,0,0.25);}
 footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:14px;}
-
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;}
-
-.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);display:none;justify-content:center;align-items:center;z-index:9999;}
-.lightbox img{max-width:90%;max-height:90%;border-radius:12px;}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,0.3);transition:0.3s ease;}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.35);}
 </style>
 </head>
 
@@ -90,85 +71,102 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 <div class="hero-slide"><img src="casa10.jpg"></div>
 
 <div class="hero-overlay">
-<h2>Constructora líder en el sur de Chile</h2>
-<p>Presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón.</p>
-<a class="btn" href="https://wa.me/56933890368" target="_blank">Cotizar Proyecto</a>
+<h2>Construimos confianza, calidad y patrimonio</h2>
+<p>Más que casas, desarrollamos proyectos sólidos y personalizados en el sur de Chile. Diseños modernos que se adaptan a los m² que necesitas.</p>
+<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
 </div>
+</section>
+
+<section id="about" class="section">
+<h2>Sobre Nosotros</h2>
+<p>Iniciamos como Forestal Ramos, ahora Properties Family. Somos una constructora consolidada en el sur de Chile, especializada en proyectos de calidad.</p>
+<p>Contamos con planificación profesional, supervisión técnica y procesos estructurados en cada obra, asegurando resultados duraderos.</p>
+</section>
+
+<section class="section services">
+<h2>Por qué elegirnos</h2>
+<ul>
+<li>✔ Experiencia comprobada en la región sur</li>
+<li>✔ Materiales de alta calidad</li>
+<li>✔ Cumplimiento de plazos</li>
+<li>✔ Supervisión técnica constante</li>
+<li>✔ Garantía y confianza</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Diseños Adaptables a tus Necesidades</h2>
+<p style="max-width:900px;margin:auto;font-size:18px;line-height:1.7;">
+Desarrollamos modelos base que pueden ajustarse en superficie, distribución y terminaciones según los m² que necesites.
+Desde viviendas compactas hasta casas familiares de mayor tamaño, manteniendo siempre calidad estructural y diseño moderno.
+</p>
 </section>
 
 <section id="projects" class="section">
 <h2>Proyectos Destacados</h2>
-
-<p class="projects-description">
-<strong>Diseños adaptables a tu medida.</strong><br>
-Cada modelo puede ajustarse en superficie y distribución según tus necesidades.
-</p>
-
 <div class="projects">
-
-<div class="project-card">
-<img src="casa1.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Alerce</h3>
-<p>Desde 60 m² hasta 90 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Alerce" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa3.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Arrayán</h3>
-<p>Desde 100 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Arrayán" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa4.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Coihue</h3>
-<p>Desde 70 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Coihue" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa5.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Canelo</h3>
-<p>Desde 36 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Canelo" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa6.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Lenga</h3>
-<p>Desde 80 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Lenga" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa7.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Volcán</h3>
-<p>Desde 120 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Volcán" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa8.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Lago</h3>
-<p>Desde 100 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Lago" target="_blank">Cotizar este modelo</a>
-</div>
-
-<div class="project-card">
-<img src="casa10.jpg" onclick="openLightbox(this.src)">
-<h3>Modelo Patagonia</h3>
-<p>Desde 90 m²</p>
-<a class="project-btn" href="https://wa.me/56933890368?text=Quiero%20cotizar%20Modelo%20Patagonia" target="_blank">Cotizar este modelo</a>
-</div>
-
+<img src="casa1.jpg">
+<img src="casa3.jpg">
+<img src="casa4.jpg">
+<img src="casa5.jpg">
+<img src="casa6.jpg">
+<img src="casa7.jpg">
+<img src="casa8.jpg">
+<img src="casa10.jpg">
 </div>
 </section>
 
+<section class="section" style="background:#f7f3ec;">
+<h2>Nuestro Proceso</h2>
+<div style="max-width:1000px;margin:auto;text-align:left;font-size:18px;line-height:1.8;">
+<p><strong>1. Evaluación y Diseño:</strong> Analizamos tu terreno y necesidades.</p>
+<p><strong>2. Planificación Técnica:</strong> Definimos estructura, materiales y plazos.</p>
+<p><strong>3. Construcción Supervisada:</strong> Control técnico constante en cada etapa.</p>
+<p><strong>4. Entrega Garantizada:</strong> Proyecto terminado listo para habitar.</p>
+</div>
+</section>
+
+<section class="section results">
+<h2>Resultados que hablan por nosotros</h2>
+<div class="results-grid">
+<img src="casa1.jpg">
+<img src="casa3.jpg">
+<img src="casa4.jpg">
+<img src="casa5.jpg">
+<img src="casa6.jpg">
+<img src="casa7.jpg">
+<img src="casa8.jpg">
+<img src="casa10.jpg">
+</div>
+</section>
+
+<section class="section reviews">
+<h2>Opiniones de Nuestros Clientes</h2>
+<div class="review-grid">
+<div class="review-card"><span>★★★★★</span><p>Excelente calidad en la construcción y terminaciones.</p></div>
+<div class="review-card"><span>★★★★★</span><p>Profesionales responsables y comprometidos con cada detalle.</p></div>
+<div class="review-card"><span>★★★★★</span><p>Construcción sólida y moderna. Totalmente recomendados.</p></div>
+<div class="review-card"><span>★★★★★</span><p>Servicio impecable y atención personalizada.</p></div>
+</div>
+</section>
+
+<section class="cta">
+<h2>¿Tienes un proyecto en mente?</h2>
+<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
+</section>
+
 <section class="section" id="contact">
-<h2>Contacto</h2>
-<p>📞 WhatsApp: +56 9 3389 0368</p>
-<p>📧 Email: Forestalramos.rj@gmail.com</p>
+<h2>Solicita tu Cotización</h2>
+<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">
+<input type="text" name="Nombre" placeholder="Tu nombre" required>
+<input type="email" name="Correo" placeholder="Tu correo electrónico" required>
+<input type="text" name="Telefono" placeholder="Teléfono">
+<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>
+<button type="submit">Enviar Solicitud</button>
+<input type="hidden" name="_captcha" value="false">
+</form>
+<p>📞 WhatsApp: <a href="https://wa.me/56933890368" target="_blank">+56 9 3389 0368</a></p>
+<p>📧 Email: <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
 <p>📍 Dirección: Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
 </section>
 
@@ -176,28 +174,30 @@ Cada modelo puede ajustarse en superficie y distribución según tus necesidades
 © 2026 Properties Family | Forestal Ramos
 </footer>
 
-<a href="https://wa.me/56933890368" class="whatsapp-float" target="_blank">💬</a>
-
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-<img id="lightbox-img">
-</div>
+<a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
-let slides=document.querySelectorAll('.hero-slide');
-let current=0;
+let slides = document.querySelectorAll('.hero-slide');
+let current = 0;
+if(slides.length>0){
 function nextSlide(){
 slides[current].classList.remove('active');
-current=(current+1)%slides.length;
+current = (current+1)%slides.length;
 slides[current].classList.add('active');
 }
 setInterval(nextSlide,5000);
-
-function openLightbox(src){
-document.getElementById("lightbox-img").src=src;
-document.getElementById("lightbox").style.display="flex";
 }
-function closeLightbox(){
-document.getElementById("lightbox").style.display="none";
+
+const sections = document.querySelectorAll('.section');
+if(sections.length>0){
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
 }
 </script>
 
