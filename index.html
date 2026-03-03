@@ -6,7 +6,6 @@
 <title>Constructora líder en el sur de Chile | Properties Family</title>
 <meta name="description" content="Properties Family: Constructora consolidada en el sur de Chile. Contamos con gran presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón. Área de trabajo en las regiones de Los Ríos, Los Lagos y La Araucanía.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
 body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
 a{text-decoration:none;}
@@ -17,7 +16,7 @@ nav a{color:#d6c3a5;margin-left:25px;}
 .hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
 .hero-slide.active{opacity:1;}
 .hero-slide img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.55);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;padding:20px;}
+.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
 .hero-overlay h2{font-family:'Playfair Display', serif;font-size:50px;font-weight:700;letter-spacing:1px;text-shadow:0 4px 10px rgba(0,0,0,0.5);}
 .hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;line-height:1.5;}
 .btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
@@ -34,11 +33,13 @@ nav a{color:#d6c3a5;margin-left:25px;}
 .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
 .results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
+.reviews{background:#ffffff;}
 .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
 .review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;transition:transform 0.5s ease, box-shadow 0.5s ease;}
 .review-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,0.15);}
 .review-card span{font-size:20px;color:#d4a017;}
 .review-card p{margin-top:15px;line-height:1.6;}
+.review-card strong{display:block;margin-top:15px;}
 .cta{background:#1f1f1f;color:white;padding:80px 20px;}
 form input, form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}
 form button{background: linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s ease;}
@@ -48,7 +49,6 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 .whatsapp-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.35);}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -61,18 +61,19 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </header>
 
 <section class="hero-slider">
-<div class="hero-slide active"><img src="casa1.jpg"></div>
-<div class="hero-slide"><img src="casa3.jpg"></div>
-<div class="hero-slide"><img src="casa4.jpg"></div>
-<div class="hero-slide"><img src="casa5.jpg"></div>
-<div class="hero-slide"><img src="casa6.jpg"></div>
-<div class="hero-slide"><img src="casa7.jpg"></div>
-<div class="hero-slide"><img src="casa8.jpg"></div>
-<div class="hero-slide"><img src="casa10.jpg"></div>
+<div class="hero-slide active"><img src="casa1.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa3.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa4.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa5.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa6.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa7.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa8.jpg" loading="lazy"></div>
+<div class="hero-slide"><img src="casa10.jpg" loading="lazy"></div>
 
 <div class="hero-overlay">
-<h2>Construimos confianza, calidad y patrimonio</h2>
-<p>Más que casas, desarrollamos proyectos sólidos y personalizados en el sur de Chile. Diseños modernos que se adaptan a los m² que necesitas.</p>
+<h2>Constructora líder en el sur de Chile</h2>
+<p>Contamos con gran presencia en Futrono, Valdivia, Osorno, Puerto Varas, Frutillar y Pucón.<br>
+Nuestra área de trabajo abarca las regiones de Los Ríos, Los Lagos y La Araucanía.</p>
 <a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
 </div>
 </section>
@@ -94,178 +95,49 @@ footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:1
 </ul>
 </section>
 
-<section class="section">
-<h2>Diseños Adaptables a tus Necesidades</h2>
-<p style="max-width:900px;margin:auto;font-size:18px;line-height:1.7;">
-Desarrollamos modelos base que pueden ajustarse en superficie, distribución y terminaciones según los m² que necesites.
-Desde viviendas compactas hasta casas familiares de mayor tamaño, manteniendo siempre calidad estructural y diseño moderno.
-</p>
-</section>
-
-<section id="projects" class="section" style="background:#f9f6f1;">
+<section id="projects" class="section">
 <h2>Proyectos Destacados</h2>
+<div class="projects">
 
-<div class="projects" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:auto;">
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);transition:0.3s;">
-<img src="casa1.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 1</h3>
-<p style="color:#777;">Desde 60m² hasta 90m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa10.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 2</h3>
-<p style="color:#777;">Desde 90m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa3.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 3</h3>
-<p style="color:#777;">Desde 100m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa4.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 4</h3>
-<p style="color:#777;">Desde 70m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa5.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 5</h3>
-<p style="color:#777;">Desde 36m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa6.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 6</h3>
-<p style="color:#777;">Desde 80m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa7.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 7</h3>
-<p style="color:#777;">Desde 120m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-<div style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
-<img src="casa8.jpg" style="width:100%;height:250px;object-fit:cover;">
-<div style="padding:20px;text-align:center;">
-<h3>Casa Modelo 8</h3>
-<p style="color:#777;">Desde 100m²</p>
-<a href="#contact" style="display:inline-block;margin-top:10px;padding:10px 20px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">Cotizar este modelo</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section" style="background:#f7f3ec;">
-<h2>Nuestro Proceso</h2>
-<div style="max-width:1000px;margin:auto;text-align:left;font-size:18px;line-height:1.8;">
-<p><strong>1. Evaluación y Diseño:</strong> Analizamos tu terreno y necesidades.</p>
-<p><strong>2. Planificación Técnica:</strong> Definimos estructura, materiales y plazos.</p>
-<p><strong>3. Construcción Supervisada:</strong> Control técnico constante en cada etapa.</p>
-<p><strong>4. Entrega Garantizada:</strong> Proyecto terminado listo para habitar.</p>
-</div>
-</section>
-
-<section class="section results">
-<h2>Resultados que hablan por nosotros</h2>
-<div class="results-grid">
+<div style="text-align:center;">
 <img src="casa1.jpg">
+<p><strong>Modelo A</strong><br>Desde 60m² hasta 90m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa3.jpg">
+<p><strong>Modelo C</strong><br>Desde 100m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa4.jpg">
+<p><strong>Modelo D</strong><br>Desde 70m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa5.jpg">
+<p><strong>Modelo E</strong><br>Desde 36m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa6.jpg">
+<p><strong>Modelo F</strong><br>Desde 80m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa7.jpg">
+<p><strong>Modelo G</strong><br>Desde 120m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa8.jpg">
+<p><strong>Modelo H</strong><br>Desde 100m²</p>
+</div>
+
+<div style="text-align:center;">
 <img src="casa10.jpg">
+<p><strong>Modelo B</strong><br>Desde 90m²</p>
+</div>
+
 </div>
 </section>
-
-<section class="section reviews">
-<h2>Opiniones de Nuestros Clientes</h2>
-<div class="review-grid">
-<div class="review-card"><span>★★★★★</span><p>Excelente calidad en la construcción y terminaciones.</p></div>
-<div class="review-card"><span>★★★★★</span><p>Profesionales responsables y comprometidos con cada detalle.</p></div>
-<div class="review-card"><span>★★★★★</span><p>Construcción sólida y moderna. Totalmente recomendados.</p></div>
-<div class="review-card"><span>★★★★★</span><p>Servicio impecable y atención personalizada.</p></div>
-</div>
-</section>
-
-<section class="cta">
-<h2>¿Tienes un proyecto en mente?</h2>
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>
-</section>
-
-<section class="section" id="contact">
-<h2>Solicita tu Cotización</h2>
-<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">
-<input type="text" name="Nombre" placeholder="Tu nombre" required>
-<input type="email" name="Correo" placeholder="Tu correo electrónico" required>
-<input type="text" name="Telefono" placeholder="Teléfono">
-<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>
-<button type="submit">Enviar Solicitud</button>
-<input type="hidden" name="_captcha" value="false">
-</form>
-<p>📞 WhatsApp: <a href="https://wa.me/56933890368" target="_blank">+56 9 3389 0368</a></p>
-<p>📧 Email: <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>
-<p>📍 Dirección: Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>
-</section>
-
-<footer>
-© 2026 Properties Family | Forestal Ramos
-</footer>
-
-<a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>
-
-<script>
-let slides = document.querySelectorAll('.hero-slide');
-let current = 0;
-if(slides.length>0){
-function nextSlide(){
-slides[current].classList.remove('active');
-current = (current+1)%slides.length;
-slides[current].classList.add('active');
-}
-setInterval(nextSlide,5000);
-}
-
-const sections = document.querySelectorAll('.section');
-if(sections.length>0){
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-},{threshold:0.2});
-sections.forEach(section=>observer.observe(section));
-}
-</script>
-
-</body>
-</html>
