@@ -383,26 +383,40 @@ Nuestro cliente quedó completamente conforme con el resultado final y destacó 
 <p>📍 Dirección: Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>    
 </section>  <footer>    
 © 2026 Properties Family | Forestal Ramos    
-</footer>  <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>  <script>    
+</footer>  <a href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" class="whatsapp-float" target="_blank">💬</a>  <script>
 let slides=document.querySelectorAll('.hero-slide');    
 let current=0;    
 if(slides.length>0){    
-function nextSlide(){    
-slides[current].classList.remove('active');    
-current=(current+1)%slides.length;    
-slides[current].classList.add('active');    
+    function nextSlide(){    
+        slides[current].classList.remove('active');    
+        current=(current+1)%slides.length;    
+        slides[current].classList.add('active');    
+    }    
+    setInterval(nextSlide,5000);    
 }    
-setInterval(nextSlide,5000);    
-}    
+
 const sections=document.querySelectorAll('.section');    
 if(sections.length>0){    
-const observer=new IntersectionObserver((entries)=>{    
-entries.forEach(entry=>{    
-if(entry.isIntersecting){    
-entry.target.classList.add('show');    
+    const observer=new IntersectionObserver((entries)=>{    
+        entries.forEach(entry=>{    
+            if(entry.isIntersecting){    
+                entry.target.classList.add('show');    
+            }    
+        });    
+    }, {threshold:0.2});    
+    sections.forEach(section=>observer.observe(section));    
 }    
-});    
-},{threshold:0.2});    
-sections.forEach(section=>observer.observe(section));    
-}    
-</script>  </body>    </html>
+</script>
+
+<!-- Script menú hamburguesa -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
