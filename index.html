@@ -219,7 +219,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 ">
 Más solicitada
  </span> 
-<img src="casa1.jpg">      
+<img src="casa1.jpg" onclick="abrirCasa('coihue')">      
 <p>    
 <strong>Casa Coihue</strong><br>    
 Modelo más solicitado para primera vivienda en el sur de Chile.<br>    
@@ -594,9 +594,69 @@ Hablar por WhatsApp
 
  </div> 
 <script>
-setTimeout(() => {
-  document.getElementById('whatsapp-popup').style.display = 'block';
+function abrirCasa(tipo) {  
+  const titulo = document.getElementById('tituloCasa');  
+  const descripcion = document.getElementById('descripcionCasa');  
+  const btn = document.getElementById('btnCasa');  
+  
+  if (tipo === 'coihue') {  
+    titulo.innerText = 'Casa Coihue';  
+    descripcion.innerText = 'Modelo más solicitado. Ideal para parcelas, rápida construcción y excelente precio/calidad.';  
+    btn.href = 'https://wa.me/56933890368?text=Hola quiero información de la Casa Coihue';  
+  }  
+  
+  document.getElementById('modalCasa').style.display = 'flex';  
+}  
+
+function cerrarCasa() {  
+  document.getElementById('modalCasa').style.display = 'none';  
+}
+
+setTimeout(() => {  
+  document.getElementById('whatsapp-popup').style.display = 'block';  
 }, 5000);
-</script>  
+</script>
+<div id="modalCasa" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:2000;
+">
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+max-width:500px;
+width:90%;
+text-align:center;
+position:relative;
+">
+
+<span onclick="cerrarCasa()" style="
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+font-size:20px;
+font-weight:bold;
+">✖</span>
+
+<h2 id="tituloCasa">Casa</h2>
+
+<p id="descripcionCasa"></p>
+
+<a id="btnCasa" class="btn" target="_blank">
+Consultar por WhatsApp
+</a>
+
+</div>
+</div>  
 </body>  
 </html>
