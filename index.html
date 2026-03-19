@@ -594,26 +594,26 @@ Hablar por WhatsApp
 
  </div> 
 <script>
-function abrirCasa(tipo) {  
-  const titulo = document.getElementById('tituloCasa');  
-  const descripcion = document.getElementById('descripcionCasa');  
-  const btn = document.getElementById('btnCasa');  
+function abrirCasa(tipo) {    
+  const titulo = document.getElementById('tituloCasa');    
+  const descripcion = document.getElementById('descripcionCasa');    
+  const btn = document.getElementById('btnCasa');    
+    
+  if (tipo === 'coihue') {    
+    titulo.innerText = 'Casa Coihue';    
+    descripcion.innerText = 'Modelo más solicitado. Ideal para parcelas, rápida construcción y excelente precio/calidad.';    
+    btn.href = 'https://wa.me/56933890368?text=Hola quiero información de la Casa Coihue';    
+  }    
+    
+  document.getElementById('modalCasa').style.display = 'flex';    
+}    
   
-  if (tipo === 'coihue') {  
-    titulo.innerText = 'Casa Coihue';  
-    descripcion.innerText = 'Modelo más solicitado. Ideal para parcelas, rápida construcción y excelente precio/calidad.';  
-    btn.href = 'https://wa.me/56933890368?text=Hola quiero información de la Casa Coihue';  
-  }  
-  
-  document.getElementById('modalCasa').style.display = 'flex';  
+function cerrarCasa() {    
+  document.getElementById('modalCasa').style.display = 'none';    
 }  
 
-function cerrarCasa() {  
-  document.getElementById('modalCasa').style.display = 'none';  
-}
-
-setTimeout(() => {  
-  document.getElementById('whatsapp-popup').style.display = 'block';  
+setTimeout(() => {    
+  document.getElementById('whatsapp-popup').style.display = 'block';    
 }, 5000);
 </script>
 <div id="modalCasa" style="
