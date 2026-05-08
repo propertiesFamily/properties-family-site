@@ -1,626 +1,139 @@
-<!DOCTYPE html>  <html lang="es">    <head>      <meta charset="UTF-8">          <meta name="viewport" content="width=device-width, initial-scale=1.0">            <title>Properties Family | Construcción de casas modernas en el sur de Chile (Osorno, Puerto Varas, Futrono)</title>        <link rel="icon" type="image/png" href="favicon.png">            <meta name="description" content="Construcción de casas en el sur de Chile. Proyectos en Osorno, Puerto Varas, Futrono, Pucón y alrededores. Cotiza tu casa con una constructora con experiencia y resultados reales.">                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">  <style>                    body{margin:0;font-family:'Roboto',sans-serif;background:#f2ede6;color:#2b2b2b;}
-a{text-decoration:none;}
-header{
-background:#111;
-padding:25px 80px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:3px solid #8B5E3C;
-position: relative;
-z-index: 1000;
-}  .logo-container img{
-height:60px;
-}    nav a{
-color:#ffffff;
-margin-left:40px;
-font-weight:500;
-letter-spacing:1px;
-transition:0.3s ease;
-}  nav a:hover{
-color:#8B5E3C;
-}  .nav-cta{
-border:1px solid #8B5E3C;
-padding:8px 18px;
-border-radius:6px;
-}  .nav-cta:hover{
-background:#8B5E3C;
-color:white;
-}
-.hero-slider{position:relative;height:95vh;overflow:hidden;}
-.hero-slide{position:absolute;width:100%;height:100%;opacity:0;transition:opacity 1s ease-in-out;}
-.hero-slide.active{opacity:1;}
-.hero-slide img{width:100%;height:100%;object-fit:cover;}
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center;color:white;}
-.hero-overlay h1{
-font-family:'Playfair Display', serif;
-font-size:48px;
-font-weight:600;
-line-height:1.2;
-text-align:center;
-text-shadow:0 4px 10px rgba(0,0,0,0.5);
-}  .hero-overlay h1 span{
-font-size:32px;
-font-weight:300;
-display:block;
-margin-top:5px;
-}
-.hero-overlay p{font-size:22px;margin-top:20px;max-width:700px;line-height:1.5;}
-.btn{display:inline-block;margin-top:25px;padding:14px 28px;background:linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;border-radius:8px;font-weight:600;box-shadow:0 6px 15px rgba(0,0,0,0.25);transition:0.3s ease;}
-.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
-.section{padding:80px 20px;text-align:center;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
-.section.show{opacity:1;transform:translateY(0);}
-.services ul{list-style:none;padding:0;max-width:800px;margin:auto;text-align:left;}
-.services li{margin:18px 0;font-size:18px;}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:auto;}
-.projects img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.12);
-transition:transform 0.4s ease, box-shadow 0.4s ease;
-}
-.projects div{
-transition: transform 0.3s ease;
-}
+Logo Properties Family Constructora
+                Nosotros                 Proyectos                 Contacto                 [Cotizar](https://wa.me/56933890368?text=Hola,%20quiero%20cotizar...)                                                             
 
-.projects div:hover{
-transform: translateY(-6px);
-}
-.projects img:hover{
-transform:scale(1.05);
-box-shadow:0 15px 30px rgba(0,0,0,0.25);
-filter:brightness(1.05);
-cursor:pointer;
-}
-.results{background:#f9f6f0;padding:100px 20px;text-align:center;}
-.results h2{font-family:'Playfair Display', serif;font-size:42px;margin-bottom:15px;}
-.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:auto;}
-.results-grid img{width:100%;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);transition:transform 0.5s ease, box-shadow 0.5s ease;}
-.results-grid img:hover{transform:scale(1.05);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
-.reviews{background:#ffffff;}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;max-width:1100px;margin:auto;}
-.review-card{background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 12px 25px rgba(0,0,0,0.1);text-align:left;transition:transform 0.5s ease, box-shadow 0.5s ease;}
-.review-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(0,0,0,0.15);}
-.review-card span{font-size:20px;color:#d4a017;}
-.review-card p{margin-top:15px;line-height:1.6;}
-.cta{background:#1f1f1f;color:white;padding:80px 20px;}
-form input, form textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ccc;border-radius:6px;}
-form button{background: linear-gradient(135deg,#8B5E3C,#A07A5A);color:white;padding:14px 28px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s ease;}
-form button:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 20px rgba(0,0,0,0.25);}
-footer{background:#1f1f1f;color:white;text-align:center;padding:25px;font-size:14px;}
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;text-decoration:none;box-shadow:0 6px 15px rgba(0,0,0,0.3);transition:0.3s ease;}
-.whatsapp-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.35);}
-</style>  </head>  <body>   <header>
+Construcción de casas modernas               en el sur de Chile
 
-  <div class="logo-container">                
-    <img src="logo.png" alt="Logo Properties Family Constructora">                
-  </div>    <!-- Botón menú hamburguesa para móviles -->    <div class="menu-toggle" id="menu-toggle">                
-    <span></span>                
-    <span></span>                
-    <span></span>                
-  </div>    <nav id="nav-menu">                
-<a href="#about">Nosotros</a>                
-<a href="#projects">Proyectos</a>                
-<a href="#contact">Contacto</a>                
-<a href="https://wa.me/56933890368?text=Hola,%20quiero%20cotizar..." class="nav-cta" target="_blank">Cotizar</a>                
-  </nav>                
-</header>  <section class="hero-slider">                    
-<div class="hero-slide active"><img src="portada.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa3.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa4.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa5.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa6.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa7.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa8.jpg" loading="lazy"></div>                    
-<div class="hero-slide"><img src="casa10.jpg" loading="lazy"></div>  <div class="hero-overlay">                    
- <h1>              
-Construcción de casas modernas<br>              
-<span>en el sur de Chile</span>              
- </h1>               
-  <p style="margin-top:15px;font-size:16px;opacity:0.9;">              
-✔ +9 años construyendo en el sur<br>              
-✔ Proyectos reales en terreno<br>              
-✔ Clientes satisfechos en la región              
-  </p>              
-  <div style="display:flex;justify-content:center;gap:40px;margin-top:25px;flex-wrap:wrap;">    <div style="text-align:center;">              
-<h3 style="font-size:28px;color:#8B5E3C;margin:0;">+9</h3>              
-<p style="margin:0;font-size:14px;">Años de experiencia</p>              
-</div>    <div style="text-align:center;">              
-<h3 style="font-size:28px;color:#8B5E3C;margin:0;">+25</h3>              
-<p style="margin:0;font-size:14px;">Proyectos construidos</p>              
-</div>    <div style="text-align:center;">              
-<h3 style="font-size:28px;color:#8B5E3C;margin:0;">100%</h3>              
-<p style="margin:0;font-size:14px;">Clientes satisfechos</p>              
-</div>      </div>              
-<a class="btn" href="https://wa.me/56933890368?text=Hola,%20quiero%20cotizar%20mi%20casa%20en%20el%20sur.%20Mi%20nombre%20es:%20____%20|%20Ciudad:%20____%20|%20Tipo%20de%20proyecto:%20____%20|%20¿Tienes%20terreno?:%20Sí/No%20|%20Presupuesto%20aprox:%20____" target="_blank">Cotizar Proyecto</a>                   
-</div>                    
-</section> <section class="section">    <h2>Construcción de casas en el sur de Chile</h2>    <p>              
-En Properties Family desarrollamos proyectos de construcción de viviendas              
-en distintas ciudades del sur de Chile, adaptándonos a las condiciones              
-climáticas y características de cada zona.              
-</p>    <p>              
-Actualmente ejecutamos proyectos en:              
-</p>    <ul style="list-style:none;padding:0;font-size:18px;">              
-<li>✔ Construcción de casas en Pucón</li>              
-<li>✔ Construcción de casas en Villarrica</li>              
-<li>✔ Construcción de casas en Futrono</li>              
-<li>✔ Construcción de casas en Frutillar</li>              
-<li>✔ Construcción de casas en Osorno</li>              
-<li>✔ Construcción de casas en Puerto Varas</li>              
-</ul>    </section> <section id="about" class="section">                    
-<h2>Sobre Nosotros</h2>                    
-<p>                
-Properties Family nace como evolución de <strong>Forestal Ramos</strong>, empresa con trayectoria en el sur de Chile y base sólida en ejecución de proyectos habitacionales.                
-</p>  <p>                
-Con más de <strong>9 años de experiencia</strong>, hemos desarrollado construcciones adaptadas a las condiciones climáticas del sur, trabajando bajo planificación técnica, supervisión constante y procesos estructurados en cada etapa de obra.                
-</p>  <p>                
-Nuestra experiencia nos permite ofrecer proyectos funcionales, responsables y ajustados a los metros cuadrados y distribución que cada cliente requiera, garantizando calidad, cumplimiento y respaldo profesional.                
-</p>  <p>                
-Hoy, como Properties Family, consolidamos esa trayectoria bajo una identidad moderna, manteniendo el mismo compromiso, seriedad y responsabilidad que nos ha caracterizado desde nuestros inicios.                
-</p>                    
-</section>  <section class="section services">                    
-<h2>Por qué elegirnos</h2>                    
-<ul>                    
-<li>✔ Experiencia comprobada en la región sur</li>                    
-<li>✔ Materiales de alta calidad</li>                    
-<li>✔ Cumplimiento de plazos</li>                    
-<li>✔ Supervisión técnica constante</li>                    
-<li>✔ Garantía y confianza</li>                    
-</ul>                    
-</section>   <section id="projects" class="section">                    
-<h2>Proyectos Destacados</h2>      <div class="projects">    <div style="text-align:center; position:relative; border:2px solid #8B5E3C; border-radius:15px; padding:10px;">               
- <span style="              
-position:absolute;              
-top:15px;              
-right:15px;              
-background:linear-gradient(135deg,#8B5E3C,#A07A5A);              
-color:white;              
-padding:6px 12px;              
-font-size:12px;              
-font-weight:600;              
-border-radius:20px;              
-box-shadow:0 4px 10px rgba(0,0,0,0.2);              
-">              
-Más solicitada              
- </span>               
-<img src="casa1.jpg" onclick="abrirCasa('coihue')">                    
-<p>                  
-<strong>Casa Coihue</strong><br>                  
-Modelo más solicitado para primera vivienda en el sur de Chile.<br>                  
-Ideal para parcelas, rápido de construir y excelente relación precio/calidad.<br>                  
-Desde 60m² hasta 90m²                  
-</p>    <p style="font-size:13px;opacity:0.7;margin-top:8px;">              
-<span style="color:#8B5E3C;font-weight:600;">              
-Alta demanda este mes — respuesta rápida por WhatsApp              
-</span>              
-</p>   <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"               
-href="https://wa.me/56933890368?text=Hola,%20quiero%20saber%20el%20precio%20de%20la%20Casa%20Coihue.%0A%0AMi%20nombre%20es:%20____%0AUbicación%20del%20proyecto:%20____%0A¿Tienes%20terreno?:%20Sí/No%0ATamaño%20aprox:%20____%20m2"               
-target="_blank">              
-Ver precio y detalles              
-</a>    </div>    <div style="text-align:center;">                    
-<img src="casa3.jpg">                    
-<p>                
-<strong>Casa Arrayán</strong><br>                
-Diseño moderno con mayor amplitud y excelente distribución.<br>                
-Desde 100m²                
-</p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Arrayán"                
-target="_blank">              
-Ver precio ahora             
-</a>    </div>    <div style="text-align:center; position:relative;">  <span style="                
-position:absolute;                
-top:15px;                
-left:15px;                
-background:linear-gradient(135deg,#8B5E3C,#A07A5A);                
-color:white;                
-padding:6px 12px;                
-font-size:12px;                
-font-weight:600;                
-border-radius:20px;                
-box-shadow:0 4px 10px rgba(0,0,0,0.2);                
-">              
-Modelo Premium              
-</span>    <img src="casa12.jpg">  <p>          
-<strong>Casa Altos Lagos</strong><br>          
-Proyecto de alto estándar con diseño elegante y amplios espacios.<br>          
-Desde 170m²  </p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Altos%20Lagos"                
-target="_blank">              
-Solicitar plano y precio              
-</a>    </div>   <div style="text-align:center;">                    
-<img src="casa5.jpg">                    
-<p>                
-<strong>Casa Alerce</strong><br>                
-Modelo compacto y eficiente ideal para proyectos pequeños.<br>                
-Desde 36m²                
-</p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Alerce"                
-target="_blank">              
-Solicitar plano y precio              
-</a>    </div>    <div style="text-align:center;">                    
-<img src="casa6.jpg">                    
-<p>                
-<strong>Casa Volcán</strong><br>                
-Vivienda familiar con diseño robusto pensado para el sur.<br>                
-Desde 80m²                
-</p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Volcán"                
-target="_blank">              
-Solicitar plano y precio              
-</a>    </div>    <div style="text-align:center;">                    
-<img src="casa7.jpg">                    
-<p>                
-<strong>Casa Lago</strong><br>                
-Diseño amplio pensado para parcelas y entornos naturales.<br>                
-Desde 120m²                
-</p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Lago"                
-target="_blank">              
-Solicitar plano y precio              
-</a>    </div>    <div style="text-align:center;">                    
-<img src="casa8.jpg">                    
-<p>                
-<strong>Casa Montaña</strong><br>                
-Modelo moderno con carácter sureño y excelente distribución.<br>                
-Desde 100m²                
-</p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Montaña"                
-target="_blank">              
-Solicitar plano y precio              
-</a>    </div>    <div style="text-align:center;">                    
-<img src="casa10.jpg">                    
-<p>                
-<strong>Casa Patagonia</strong><br>                
-Diseño cálido y funcional adaptado al clima del sur.<br>                
-Desde 90m²                
-</p>  <a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"                
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20la%20Casa%20Patagonia"                
-target="_blank">              
-Solicitar plano y precio              
-</a>
-</div>
+          ✔ +9 años construyendo en el sur               ✔ Proyectos reales en terreno               ✔ Clientes satisfechos en la región                   
 
-<div style="text-align:center; position:relative; border:2px solid #8B5E3C; border-radius:15px; padding:10px;">
++9
 
-<span style="
-position:absolute;
-top:15px;
-left:15px;
-background:linear-gradient(135deg,#8B5E3C,#A07A5A);
-color:white;
-padding:6px 12px;
-font-size:12px;
-font-weight:600;
-border-radius:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-">
-Nuevo Modelo
-</span>
+Años de experiencia
 
-<img src="casa23.jpg">
++25
 
-<p>
-<strong>Modelo Austral</strong><br>
-Proyecto moderno y acogedor diseñado para integrarse perfectamente con el entorno natural del sur de Chile.<br><br>
+Proyectos construidos
 
-🛏 2 dormitorios<br>
-🚿 2 baños<br>
-🍽 Cocina integrada<br>
-🛋 Living comedor abierto<br>
-🧺 Logia independiente<br>
-🌿 Terraza exterior<br><br>
+100%
 
-Desde 80m² hasta 100m²
-</p>
+Clientes satisfechos
+          [Cotizar Proyecto](https://wa.me/56933890368?text=Hola,%20quiero%20cotizar%20mi%20casa%20en%20el%20sur.%20Mi%20nombre%20es:%20____%20|%20Ciudad:%20____%20|%20Tipo%20de%20proyecto:%20____%20|%20¿Tienes%20terreno?:%20Sí/No%20|%20Presupuesto%20aprox:%20____)                      
 
-<a class="btn" style="margin-top:10px;font-size:14px;padding:10px 18px;"
-href="https://wa.me/56933890368?text=Hola%20quiero%20información%20sobre%20el%20Modelo%20Austral"
-target="_blank">
+Construcción de casas en el sur de Chile
 
+          En Properties Family desarrollamos proyectos de construcción de viviendas               en distintas ciudades del sur de Chile, adaptándonos a las condiciones               climáticas y características de cada zona.                                Actualmente ejecutamos proyectos en:                 
+
+
+✔ Construcción de casas en Pucón
+
+
+✔ Construcción de casas en Villarrica
+
+
+✔ Construcción de casas en Futrono
+
+
+✔ Construcción de casas en Frutillar
+
+
+✔ Construcción de casas en Osorno
+
+
+✔ Construcción de casas en Puerto Varas
+
+Sobre Nosotros
+
+            Properties Family nace como evolución de **Forestal Ramos**, empresa con trayectoria en el sur de Chile y base sólida en ejecución de proyectos habitacionales.                                  Con más de **9 años de experiencia**, hemos desarrollado construcciones adaptadas a las condiciones climáticas del sur, trabajando bajo planificación técnica, supervisión constante y procesos estructurados en cada etapa de obra.                                  Nuestra experiencia nos permite ofrecer proyectos funcionales, responsables y ajustados a los metros cuadrados y distribución que cada cliente requiera, garantizando calidad, cumplimiento y respaldo profesional.                                  Hoy, como Properties Family, consolidamos esa trayectoria bajo una identidad moderna, manteniendo el mismo compromiso, seriedad y responsabilidad que nos ha caracterizado desde nuestros inicios.                   
+
+Por qué elegirnos
+
+
+✔ Experiencia comprobada en la región sur
+
+
+✔ Materiales de alta calidad
+
+
+✔ Cumplimiento de plazos
+
+
+✔ Supervisión técnica constante
+
+
+✔ Garantía y confianza
+
+Proyectos Destacados
+
+                           Más solicitada                                                                       **Casa Coihue**                   Modelo más solicitado para primera vivienda en el sur de Chile.                   Ideal para parcelas, rápido de construir y excelente relación precio/calidad.                   Desde 60m² hasta 90m²                                                   Alta demanda este mes — respuesta rápida por WhatsApp                                
+Ver precio y detalles
+            **Casa Arrayán**                 Diseño moderno con mayor amplitud y excelente distribución.                 Desde 100m²                   
+Ver precio ahora
+            Modelo Premium                               **Casa Altos Lagos**           Proyecto de alto estándar con diseño elegante y amplios espacios.           Desde 170m²    
+Solicitar plano y precio
+            **Casa Alerce**                 Modelo compacto y eficiente ideal para proyectos pequeños.                 Desde 36m²                   
+Solicitar plano y precio
+            **Casa Volcán**                 Vivienda familiar con diseño robusto pensado para el sur.                 Desde 80m²                   
+Solicitar plano y precio
+            **Casa Lago**                 Diseño amplio pensado para parcelas y entornos naturales.                 Desde 120m²                   
+Solicitar plano y precio
+            **Casa Montaña**                 Modelo moderno con carácter sureño y excelente distribución.                 Desde 100m²                   
+Solicitar plano y precio
+            **Casa Patagonia**                 Diseño cálido y funcional adaptado al clima del sur.                 Desde 90m²                   
 Solicitar plano y precio
 
-</a>
+Elige cómo quieres construir tu casa
 
-</div>
+          En Properties Family ofrecemos dos modalidades adaptadas a cada cliente:               
 
-</div>
-</section>  </div>  </section> </section>  <section class="section">          
-  <h2>Elige cómo quieres construir tu casa</h2>          
-  <p style="max-width:800px;margin:auto;margin-top:10px;">          
-    En Properties Family ofrecemos dos modalidades adaptadas a cada cliente:          
-  </p>    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1000px;margin:40px auto;">  <div style="background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);">          
-  <h3>Proyecto Semi Terminado</h3>          
-  <p>          
-    Vivienda completamente terminada por el exterior, incluye estructura,          
-    revestimientos, techumbre, ventanas termopanel y puertas instaladas.          
-    Ideal para quienes desean terminar interiores a su ritmo.          
-    <a class="btn"  href="https://wa.me/56933890368?text=Hola,%20quiero%20información%20sobre%20proyecto%20semi%20terminado"      
-target="_blank">      
-Quiero cotizar Semi Terminado      
-</a>  </p>        
-</div>  <div style="background:#fffdf8;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.1);">          
-  <h3>Proyecto Llave en Mano</h3>          
-  <p>          
-    Proyecto completamente terminado, listo para habitar.          
-    Incluye terminaciones interiores, instalaciones completas y detalles finales          
-    con alto estándar de calidad.          
-    <a class="btn"  href="https://wa.me/56933890368?text=Hola,%20quiero%20información%20sobre%20proyecto%20llave%20en%20mano"      
-target="_blank">      
-Quiero cotizar Llave en Mano      
-</a>  </p>        
-</div>    </div>          
-</section>  <section class="testimonial-section">                
-  <div class="testimonial-container">                
-    <h2>Lo que dicen nuestros clientes</h2>  <div class="testimonial-box">                
-  <h3>Proyecto Casa Coihue – Futrono</h3>                
-  <p>                
-    “Quedamos completamente conformes con el trabajo realizado por Properties Family.                
-    Desde el inicio hubo claridad en la planificación, cumplimiento en los tiempos acordados                
-    y un acompañamiento constante durante todo el proceso.                
-    La calidad de la construcción superó nuestras expectativas.                
-    Sin duda los recomendaríamos para cualquier proyecto habitacional en el sur.”                
-  </p>                
-  <span>— Cliente Casa Coihue, Futrono</span>                
-</div>      </div>                
-</section>    <section class="section results">          
-<h2>Resultados que hablan por nosotros</h2>  <p style="margin-bottom:25px;">                
-<strong>Avance de obra – Proyecto Casa Coihue en Futrono</strong>                
-</p>  <video controls style="width:100%; max-width:900px; border-radius:12px;">                
-<source src="obra-coihue.mp4" type="video/mp4">                
-</video>                
- <p style="max-width:800px; margin-top:15px;">                
-Este proyecto corresponde a la construcción de la <strong>Casa Coihue</strong> realizada por nuestro equipo en Futrono.                 
-Nuestro cliente quedó completamente conforme con el resultado final y destacó la calidad del trabajo realizado durante todo el proceso de construcción.                
- </p>  <br><br>    <div class="results-grid">                    
-<img src="casa1.jpg">                    
-<img src="casa3.jpg">                    
-<img src="casa4.jpg">                    
-<img src="casa5.jpg">                    
-<img src="casa6.jpg">                    
-<img src="casa7.jpg">                    
-<img src="casa8.jpg">                    
-<img src="casa10.jpg">                    
-</div>                
-</section> <section class="cta">    <h2>Construyamos tu proyecto</h2>              
-<p style="margin-top:15px;font-size:18px;">              
-⚠️ Actualmente solo estamos tomando <strong>2 a 3 proyectos nuevos por mes</strong> para asegurar calidad y cumplimiento en cada obra.              
-</p>                
-<p style="font-size:15px;opacity:0.85;">              
-Agenda de este mes casi completa. Recomendamos evaluar tu proyecto lo antes posible.              
-</p>    <p>              
-Si tienes un terreno o estás pensando en construir tu casa en el sur de Chile,              
-nuestro equipo puede ayudarte a desarrollar tu proyecto.              
-</p>              
-<p style="font-size:14px;opacity:0.8;">              
-Trabajamos con clientes que buscan desarrollar un proyecto bien planificado y ejecutado.              
-</p>              
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto">              
-Evaluar mi proyecto              
-</a>    </section> <section class="section reviews">                    
-<h2>Opiniones de Nuestros Clientes</h2>                    
-<div class="review-grid">                    
-<div class="review-card"><span>★★★★★</span><p>Excelente calidad en la construcción y terminaciones.</p></div>                    
-<div class="review-card"><span>★★★★★</span><p>Profesionales responsables y comprometidos con cada detalle.</p></div>                    
-<div class="review-card"><span>★★★★★</span><p>Construcción sólida y moderna. Totalmente recomendados.</p></div>                    
-<div class="review-card"><span>★★★★★</span><p>Servicio impecable y atención personalizada.</p></div>                    
-</div>                    
-</section>  <section class="cta">                    
-<h2>¿Tienes un proyecto en mente?</h2>                    
-<a class="btn" href="https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto" target="_blank">Cotizar Proyecto</a>                    
-</section>  <section class="section" id="contact">                    
-<h2>Solicita tu Cotización</h2>                    
-<form action="https://formsubmit.co/Forestalramos.rj@gmail.com" method="POST">                    
-<input type="text" name="Nombre" placeholder="Tu nombre" required>                    
-<input type="email" name="Correo" placeholder="Tu correo electrónico" required>                    
-<input type="text" name="Telefono" placeholder="Teléfono">                    
-<textarea name="Mensaje" rows="5" placeholder="Describe tu proyecto..." required></textarea>                    
-<button type="submit">Enviar Solicitud</button>                    
-<input type="hidden" name="_captcha" value="false">                    
-</form>                    
-<p>📞 WhatsApp: <a href="https://wa.me/56933890368" target="_blank">+56 9 3389 0368</a></p>                    
-<p>📧 Email: <a href="mailto:Forestalramos.rj@gmail.com">Forestalramos.rj@gmail.com</a></p>                    
-<p>📍 Dirección: Sector Pancul, Comuna de Los Lagos – Región de Los Ríos</p>                    
-</section>  <footer>                    
-© 2026 Properties Family | Forestal Ramos                    
-</footer>    <script>                
-let slides=document.querySelectorAll('.hero-slide');                    
-let current=0;                    
-if(slides.length>0){                    
-    function nextSlide(){                    
-        slides[current].classList.remove('active');                    
-        current=(current+1)%slides.length;                    
-        slides[current].classList.add('active');                    
-    }                    
-    setInterval(nextSlide,5000);                    
-}      const sections=document.querySelectorAll('.section');              
-if(sections.length>0){              
-const observer=new IntersectionObserver((entries)=>{              
-entries.forEach(entry=>{              
-if(entry.isIntersecting){              
-entry.target.classList.add('show');              
-}              
-});              
-}, {threshold:0.2});              
-sections.forEach(section=>observer.observe(section));              
-}              
-</script>    <!-- Script menú hamburguesa -->  <script>      const menuToggle = document.getElementById('menu-toggle');          
-const navMenu = document.getElementById('nav-menu');  menuToggle.addEventListener('click', () => {        
-navMenu.classList.toggle('active');        
-});        
-document.querySelectorAll('#nav-menu a').forEach(link => {        
-link.addEventListener('click', () => {        
-navMenu.classList.remove('active');        
-});        
-});        
-</script>  <script type="application/ld+json">              
-{              
-"@context": "https://schema.org",              
-"@type": "ConstructionCompany",              
-"name": "Properties Family",              
-"url": "https://propertiesfamily.cl",              
-"telephone": "+56933890368",              
-"areaServed": "Sur de Chile",              
-"address": {              
- "@type": "PostalAddress",              
- "addressLocality": "Los Lagos",              
- "addressRegion": "Los Ríos",              
- "addressCountry": "Chile"              
-},              
-"description": "Constructora especializada en construcción de casas modernas en el sur de Chile."              
-}              
-</script>    <style>      .whatsapp-float {  position: fixed;      
-bottom: 25px;      
-right: 25px;      
-z-index: 1000;      
-}  .whatsapp-float:hover {    
-background-color: #1ebe5d;    
-}    
-nav {    
-transition: all 0.3s ease;    
-}    
-/* 👇 PEGA AQUÍ 👇 */  /* BOTÓN HAMBURGUESA */  
-.menu-toggle {  
-display: none;  
-flex-direction: column;  
-cursor: pointer;  
-position: relative;  
-z-index: 1100;  
-}  .menu-toggle span {
-background: #ffffff;
-height: 3px;
-width: 28px;
-margin: 5px 0;
-display: block;
-border-radius: 2px;
-}
+Proyecto Semi Terminado
 
-/* MENÚ EN MÓVIL */
-@media (max-width: 768px) {
+          Vivienda completamente terminada por el exterior, incluye estructura,               revestimientos, techumbre, ventanas termopanel y puertas instaladas.               Ideal para quienes desean terminar interiores a su ritmo.               [Quiero cotizar Semi Terminado](https://wa.me/56933890368?text=Hola,%20quiero%20información%20sobre%20proyecto%20semi%20terminado)    
 
-header {
-padding: 20px;
-}
+Proyecto Llave en Mano
 
-nav {
-position: absolute;
-top: 80px;
-right: 0;
-background: #111;
-width: 100%;
-flex-direction: column;
-align-items: center;
-display: none;
-padding: 30px 0;
-box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
+          Proyecto completamente terminado, listo para habitar.               Incluye terminaciones interiores, instalaciones completas y detalles finales               con alto estándar de calidad.               [Quiero cotizar Llave en Mano](https://wa.me/56933890368?text=Hola,%20quiero%20información%20sobre%20proyecto%20llave%20en%20mano)    
 
-nav a {
-margin: 15px 0;
-font-size: 18px;
-}
+Lo que dicen nuestros clientes
 
-nav.active {
-display: flex;
-}
+Proyecto Casa Coihue – Futrono
 
-.menu-toggle {
-display: flex;
-}
-}
-@media (max-width: 768px) {
+                “Quedamos completamente conformes con el trabajo realizado por Properties Family.                     Desde el inicio hubo claridad en la planificación, cumplimiento en los tiempos acordados                     y un acompañamiento constante durante todo el proceso.                     La calidad de la construcción superó nuestras expectativas.                     Sin duda los recomendaríamos para cualquier proyecto habitacional en el sur.”                                     — Cliente Casa Coihue, Futrono                   
 
-.hero-overlay h1 {
-font-size: 32px;
-line-height: 1.2;
-padding: 0 15px;
-}
+Resultados que hablan por nosotros
 
-.hero-overlay p {
-font-size: 16px;
-padding: 0 15px;
-}
+            **Avance de obra – Proyecto Casa Coihue en Futrono**                                                                                      Este proyecto corresponde a la construcción de la **Casa Coihue** realizada por nuestro equipo en Futrono.                  Nuestro cliente quedó completamente conforme con el resultado final y destacó la calidad del trabajo realizado durante todo el proceso de construcción.                    
 
-}
-@media (max-width: 768px) {
+Construyamos tu proyecto
 
-.hero-slider {
-height: 85vh;
-}
+          ⚠️ Actualmente solo estamos tomando **2 a 3 proyectos nuevos por mes** para asegurar calidad y cumplimiento en cada obra.                                             Agenda de este mes casi completa. Recomendamos evaluar tu proyecto lo antes posible.                                Si tienes un terreno o estás pensando en construir tu casa en el sur de Chile,               nuestro equipo puede ayudarte a desarrollar tu proyecto.                                           Trabajamos con clientes que buscan desarrollar un proyecto bien planificado y ejecutado.                             [Evaluar mi proyecto](https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto)                            
 
-}
-</style>     <div id="whatsapp-popup" style="              
-position: fixed;              
-bottom: 90px;              
-right: 20px;              
-background: white;              
-padding: 15px;              
-border-radius: 10px;              
-box-shadow: 0 10px 25px rgba(0,0,0,0.2);              
-max-width: 250px;              
-display: none;              
-z-index: 999;              
-font-size: 14px;              
-">    <span onclick="document.getElementById('whatsapp-popup').style.display='none'"               
-style="position:absolute;top:8px;right:10px;cursor:pointer;font-weight:bold;">
-✖
-</span>
+Opiniones de Nuestros Clientes
 
-👋 ¿Estás pensando en construir tu casa?
-<br><br>
-Te ayudamos a cotizar tu proyecto 👇
-<br><br>
+★★★★★ Excelente calidad en la construcción y terminaciones.
 
-<a href="https://wa.me/56933890368?text=Hola,%20quiero%20cotizar%20un%20proyecto"               
-style="color:white;background:#25D366;padding:10px 15px;border-radius:6px;display:inline-block;">
+★★★★★ Profesionales responsables y comprometidos con cada detalle.
+
+★★★★★ Construcción sólida y moderna. Totalmente recomendados.
+
+★★★★★ Servicio impecable y atención personalizada.
+
+¿Tienes un proyecto en mente?
+
+                [Cotizar Proyecto](https://wa.me/56933890368?text=Hola%20quiero%20cotizar%20un%20proyecto)                                              
+
+Solicita tu Cotización
+
+                                                                                                                         Enviar Solicitud                                                                 
+📞 WhatsApp: +56 9 3389 0368
+
+📧 Email: Forestalramos.rj@gmail.com
+
+📍 Dirección: Sector Pancul, Comuna de Los Lagos – Región de Los Ríos © 2026 Properties Family | Forestal Ramos ✖
+
+👋 ¿Estás pensando en construir tu casa?  Te ayudamos a cotizar tu proyecto 👇
+
 Hablar por WhatsApp
-</a>
+✖     
 
- </div>               
-<script>              
-function abrirCasa(tipo) {                  
-  const titulo = document.getElementById('tituloCasa');                  
-  const descripcion = document.getElementById('descripcionCasa');                  
-  const btn = document.getElementById('btnCasa');        if (tipo === 'coihue') {          
-titulo.innerText = 'Casa Coihue';          
-descripcion.innerText = 'Modelo más solicitado. Ideal para parcelas, rápida construcción y excelente precio/calidad.';          
-btn.href = 'https://wa.me/56933890368?text=Hola quiero información de la Casa Coihue';          
-}  document.getElementById('modalCasa').style.display = 'flex';        
-}  function cerrarCasa() {      
-document.getElementById('modalCasa').style.display = 'none';      
-}  setTimeout(() => {    
-document.getElementById('whatsapp-popup').style.display = 'block';    
-}, 5000);    
-</script>  <div id="modalCasa" style="              
-display:none;              
-position:fixed;              
-top:0;              
-left:0;              
-width:100%;              
-height:100%;              
-background:rgba(0,0,0,0.8);              
-justify-content:center;              
-align-items:center;              
-z-index:2000;              
-">    <div style="              
-background:white;              
-padding:25px;              
-border-radius:10px;              
-max-width:500px;              
-width:90%;              
-text-align:center;              
-position:relative;              
-">    <span onclick="cerrarCasa()" style="              
-position:absolute;              
-top:10px;              
-right:15px;              
-cursor:pointer;              
-font-size:20px;              
-font-weight:bold;              
-">✖</span>  <h2 id="tituloCasa">Casa</h2>    <p id="descripcionCasa"></p>    <a id="btnCasa" class="btn" target="_blank">              
-Consultar por WhatsApp              
-</a>    </div>              
-</div>                
-</body>                
-</html>              
+Casa
+
+Consultar por WhatsApp 
