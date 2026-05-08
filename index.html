@@ -3,17 +3,32 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:18px 70px;
+padding:22px 70px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,15,15,0.55);
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,0.08);
+background:transparent;
 z-index:1000;
-transition:all .3s ease;
+transition:all .35s ease;
 box-sizing:border-box;
+}
+
+header.scrolled{
+background:rgba(10,10,10,0.92);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+padding:14px 70px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo-container img{
+height:62px;
+transition:0.3s ease;
+}
+
+header.scrolled .logo-container img{
+height:52px;
 }  .logo-container img{
 height:60px;
 }    nav a{
@@ -574,6 +589,17 @@ font-weight:bold;
 ">✖</span>  <h2 id="tituloCasa">Casa</h2>    <p id="descripcionCasa"></p>    <a id="btnCasa" class="btn" target="_blank">                        
 Consultar por WhatsApp                        
 </a>    </div>                        
-</div>                          
+</div> 
+<script>
+window.addEventListener('scroll', () => {
+const header = document.querySelector('header');
+
+if(window.scrollY > 80){
+header.classList.add('scrolled');
+}else{
+header.classList.remove('scrolled');
+}
+});
+</script>  
 </body>                          
 </html>                    
