@@ -122,11 +122,18 @@ filter:brightness(1.05);
 .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1100px;margin:auto;}
 .projects img{
 width:100%;
-height:220px;
+height:420px;
 object-fit:cover;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.12);
-transition:transform 0.4s ease, box-shadow 0.4s ease;
+border-radius:24px;
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+transition:all .45s ease;
+display:block;
+}
+
+.projects img:hover{
+transform:scale(1.03);
+box-shadow:0 30px 60px rgba(0,0,0,0.18);
+filter:brightness(1.02);
 }
 .projects div{
 transition: transform 0.3s ease;
