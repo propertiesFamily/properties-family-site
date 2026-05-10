@@ -406,42 +406,47 @@ Quiero cotizar Llave en Mano
 </a>  </p>                                              
 </div>    </div>                                                
 </section>
-<section class="section">
+<section class="section process-section">
 
 <h2>Nuestro proceso de construcción</h2>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1100px;
-margin:auto;
-margin-top:40px;
-">
+<p style="max-width:760px;margin:auto;margin-top:15px;opacity:0.8;">
+Te acompañamos en cada etapa del proyecto para asegurar una construcción moderna, bien planificada y ejecutada con altos estándares.
+</p>
 
-<div style="background:white;padding:30px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-<h3>1. Reunión Inicial</h3>
+<div class="process-grid">
+
+<div class="process-card">
+<span class="process-number">01</span>
+<div class="process-icon">🤝</div>
+<h3>Reunión Inicial</h3>
 <p>
 Conversamos tu idea, terreno y necesidades del proyecto.
 </p>
 </div>
 
-<div style="background:white;padding:30px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-<h3>2. Diseño y Cotización</h3>
+<div class="process-card">
+<span class="process-number">02</span>
+<div class="process-icon">📐</div>
+<h3>Diseño y Cotización</h3>
 <p>
 Definimos distribución, características y presupuesto.
 </p>
 </div>
 
-<div style="background:white;padding:30px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-<h3>3. Inicio de Obra</h3>
+<div class="process-card">
+<span class="process-number">03</span>
+<div class="process-icon">🚧</div>
+<h3>Inicio de Obra</h3>
 <p>
 Comenzamos la construcción con supervisión constante.
 </p>
 </div>
 
-<div style="background:white;padding:30px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,0.08);">
-<h3>4. Entrega Final</h3>
+<div class="process-card">
+<span class="process-number">04</span>
+<div class="process-icon">🔑</div>
+<h3>Entrega Final</h3>
 <p>
 Entregamos un proyecto terminado con altos estándares de calidad.
 </p>
@@ -449,7 +454,7 @@ Entregamos un proyecto terminado con altos estándares de calidad.
 
 </div>
 
-</section> <section class="testimonial-section">                                                      
+</section>  <section class="testimonial-section">                                                      
   <div class="testimonial-container">                                                      
     <h2>Lo que dicen nuestros clientes</h2>  <div class="testimonial-box">                                                      
   <h3>Proyecto Casa Coihue – Futrono</h3>                                                      
@@ -569,7 +574,64 @@ navMenu.classList.remove('active');
 },                                                    
 "description": "Constructora especializada en construcción de casas modernas en el sur de Chile."                                                    
 }                                                    
-</script>    <style>      .whatsapp-float {  position: fixed;                                            
+</script>    <style>   .process-section{
+background:linear-gradient(180deg,#f5f1eb,#ece6de);
+padding:100px 20px;
+}
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+max-width:1150px;
+margin:auto;
+margin-top:50px;
+}
+
+.process-card{
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.4);
+padding:40px 30px;
+border-radius:24px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+position:relative;
+overflow:hidden;
+transition:all .35s ease;
+}
+
+.process-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,0.14);
+}
+
+.process-number{
+position:absolute;
+top:18px;
+right:22px;
+font-size:14px;
+font-weight:700;
+color:#b89b7a;
+letter-spacing:2px;
+}
+
+.process-icon{
+font-size:42px;
+margin-bottom:18px;
+}
+
+.process-card h3{
+font-size:28px;
+margin-bottom:15px;
+font-family:'Playfair Display',serif;
+}
+
+.process-card p{
+line-height:1.8;
+color:#555;
+font-size:16px;
+  }   .whatsapp-float {  position: fixed;                                            
 bottom: 25px;                                            
 right: 25px;                                            
 z-index: 1000;                                            
